@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="בתנועה ובצמיחה — מצע רותם גטריידה לקדנציה הקרובה, מועמד ליו״ר מועצת התלמידים והנוער הארצית.">
+<meta name="theme-color" content="#0A1E2C">
+<title>בתנועה ובצמיחה | מצע רותם גטריידה</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Heebo:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<!--
+  לתשומת לב: פונט "פלוני" הוא פונט מסחרי של סטודיו אאא ואינו זמין דרך ספריית גופנים ציבורית (כמו Google Fonts),
+  ולכן לא ניתן להטמיע אותו כאן באופן חוקי ללא רישיון. סרגל הניווט וכותרות האתר מוגדרים להשתמש ב-"Ploni" קודם כל -
+  אם יש בידכם קובצי הפונט (Ploni-Regular / Ploni-Bold) עם רישיון תקף, ניתן להוסיף כאן בלוק @font-face שמצביע לקבצים שלכם:
+  @font-face { font-family:'Ploni'; src:url('ploni-bold.woff2') format('woff2'); font-weight:700; }
+  עד אז יוצג גופן חלופי דומה (Heebo) באופן אוטומטי.
+-->
+<style>
+  :root{
+    --navy-950:#0A1E2C;
+    --navy-900:#0E2735;
+    --navy-800:#123249;
+    --navy-700:#164257;
+    --teal-700:#1F5C6B;
+    --teal-600:#276E7D;
+    --teal-500:#3C8C99;
+    --teal-300:#82C0C4;
+    --mint-100:#EAF3EF;
+    --mint-50:#F3F8F5;
+    --cream-50:#F8F6EF;
+    --amber-500:#E1A03B;
+    --amber-600:#C7852A;
+    --white:#FFFFFF;
+    --ink:#12262F;
+    --ink-soft:#3E5A61;
+    --shadow-sm:0 2px 10px rgba(10,30,44,0.06);
+    --shadow-md:0 12px 30px rgba(10,30,44,0.10);
+    --shadow-lg:0 22px 50px rgba(10,30,44,0.16);
+    --radius:18px;
+    --font-display:var(--font-ploni);
+    --font-body:'Heebo', sans-serif;
+    --font-ar:'Cairo', sans-serif;
+    --font-ploni:'Ploni','Ploni ML v2','Heebo', sans-serif;
+    --space-1:8px;
+    --space-2:16px;
+    --space-3:24px;
+    --space-4:40px;
+    --space-5:64px;
+    --theme-primary:var(--navy-950);
+    --theme-primary-light:var(--navy-800);
+    --theme-accent:var(--amber-500);
+    --theme-secondary:var(--teal-600);
+    --theme-bg:var(--cream-50);
+    scroll-behavior:smooth;
+    scroll-padding-top:84px;
+    transition:--theme-primary 0.6s ease, --theme-primary-light 0.6s ease, --theme-accent 0.6s ease, --theme-secondary 0.6s ease, --theme-bg 0.6s ease;
+  }
+
+  /* ===== THEME: SPRING 🌸 ===== */
+  body.season-spring {
+    --theme-primary:#2C5844;
+    --theme-primary-light:#3D7056;
+    --theme-accent:#FF6B9D;
+    --theme-secondary:#4ECDC4;
+    --theme-bg:#F0F8F6;
+  }
+
+  /* ===== THEME: SUMMER ☀️ ===== */
+  body.season-summer {
+    --theme-primary:#1B3A7F;
+    --theme-primary-light:#2E5FA3;
+    --theme-accent:#FFD700;
+    --theme-secondary:#00BCD4;
+    --theme-bg:#FFF9E6;
+  }
+
+  /* ===== THEME: AUTUMN 🍂 ===== */
+  body.season-autumn {
+    --theme-primary:#5C3E1E;
+    --theme-primary-light:#8B5A2B;
+    --theme-accent:#FF8C42;
+    --theme-secondary:#D2691E;
+    --theme-bg:#FFF4E6;
+  }
+
+  /* ===== THEME: WINTER 🌧️ ===== */
+  body.season-winter {
+    --theme-primary:#1A2F42;
+    --theme-primary-light:#2C4563;
+    --theme-accent:#64B5F6;
+    --theme-secondary:#B3E5FC;
+    --theme-bg:#E8F4F8;
+  }
+  @media (prefers-reduced-motion: reduce){
+    :root{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+    .gears-stage.stuck .gear-glyph{animation:none !important;}
+    .gears-stage.spinning .gear-glyph{animation:spin-cw 3s linear 1 !important;}
+    .oil-can{transition:opacity .3s ease !important;transform:none !important;}
+    .gears-stage.oiling .oil-can,.gears-stage.leaving .oil-can{transform:none !important;}
+    .oil-drop{display:none;}
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--theme-bg);
+    line-height:1.75;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    transition:background-color 0.6s ease;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--amber-500);outline-offset:3px;border-radius:4px;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;margin:0;line-height:1.28;}
+  p{margin:0 0 1.15em;}
+  p:last-child{margin-bottom:0;}
+  strong{font-weight:700;color:var(--navy-800);}
+  u{text-decoration-color:var(--amber-500);text-decoration-thickness:3px;text-underline-offset:4px;}
+  .container{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .container-narrow{max-width:760px;margin:0 auto;padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:fixed;inset-inline:0;top:0;z-index:100;
+    background:rgba(10,30,44,0.82);
+    backdrop-filter:blur(14px) saturate(140%);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    border-bottom:1px solid rgba(255,255,255,0.07);
+    transition:background .6s ease;
+  }
+  body.season-spring .nav { background:rgba(44,88,68,0.82); }
+  body.season-summer .nav { background:rgba(27,58,127,0.82); }
+  body.season-autumn .nav { background:rgba(92,62,30,0.82); }
+  body.season-winter .nav { background:rgba(26,47,66,0.82); }
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:0 24px;
+    height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  }
+  .nav-logo{
+    display:flex;flex-direction:column;line-height:1.2;gap:3px;flex-shrink:0;
+  }
+  .nav-logo .logo-main{font-family:var(--font-ploni);color:var(--white);font-size:1.2rem;font-weight:700;white-space:nowrap;}
+  .nav-logo .logo-sub{font-family:var(--font-body);font-size:.68rem;color:var(--teal-300);font-weight:500;letter-spacing:.02em;white-space:nowrap;}
+  .nav-links{
+    position:fixed;top:72px;right:0;left:0;background:var(--navy-950);
+    flex-direction:column;align-items:stretch;gap:2px;padding:12px 18px 26px;
+    opacity:0;pointer-events:none;transition:opacity .22s ease, background .6s ease;
+    max-height:calc(100vh - 72px);overflow-y:auto;overflow-x:visible;
+    display:flex;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  body.season-spring .nav-links { background:#2C5844; }
+  body.season-summer .nav-links { background:#1B3A7F; }
+  body.season-autumn .nav-links { background:#5C3E1E; }
+  body.season-winter .nav-links { background:#1A2F42; }
+  .nav-links.open{opacity:1;pointer-events:auto;}
+  .nav-links a{
+    position:relative;color:rgba(255,255,255,0.72);font-size:.92rem;font-weight:500;
+    padding:14px 14px;border-radius:12px;transition:color .25s, background .25s;white-space:nowrap;
+  }
+  .nav-links a:hover{color:var(--white);background:rgba(255,255,255,0.08);}
+  .nav-links a.active{
+    color:var(--navy-950);background:var(--theme-accent);
+    box-shadow:0 4px 16px rgba(225,160,59,.38);
+    font-weight:700;
+    transition:background 0.6s ease;
+  }
+  body.season-spring .nav-links a.active { background:#FF6B9D; box-shadow:0 4px 16px rgba(255,107,157,.38); }
+  body.season-summer .nav-links a.active { background:#FFD700; box-shadow:0 4px 16px rgba(255,215,0,.38); }
+  body.season-autumn .nav-links a.active { background:#FF8C42; box-shadow:0 4px 16px rgba(255,140,66,.38); }
+  body.season-winter .nav-links a.active { background:#64B5F6; box-shadow:0 4px 16px rgba(100,181,246,.38); }
+  .nav-links a.nav-sub{
+    font-size:.82rem;padding-inline-start:34px;color:rgba(255,255,255,.55);
+  }
+  .nav-links a.nav-sub:hover{color:var(--white);}
+  .nav-links a.nav-sub.active{color:var(--navy-950);}
+  .nav-toggle{
+    display:flex;background:none;border:none;cursor:pointer;padding:8px;
+    flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;
+  }
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .3s ease, opacity .3s ease;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* ---------- QUICK NAV STRIP (always visible; chips + scroll arrows) ---------- */
+  .quicknav{
+    position:sticky;top:72px;z-index:60;
+    background:rgba(248,246,239,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(18,38,47,.08);box-shadow:0 6px 16px rgba(10,30,44,.05);
+    transition:background 0.6s ease, border-color 0.6s ease;
+  }
+  body.season-spring .quicknav { background:rgba(240,248,246,.92); border-bottom-color:rgba(44,88,68,.1); }
+  body.season-summer .quicknav { background:rgba(255,249,230,.92); border-bottom-color:rgba(27,58,127,.1); }
+  body.season-autumn .quicknav { background:rgba(255,244,230,.92); border-bottom-color:rgba(92,62,30,.1); }
+  body.season-winter .quicknav { background:rgba(232,244,248,.92); border-bottom-color:rgba(26,47,66,.1); }
+  .quicknav-bar{
+    max-width:1200px;margin:0 auto;padding:8px 20px;
+    display:flex;align-items:center;gap:8px;
+  }
+  .quicknav-arrow{
+    flex:none;width:26px;height:26px;border-radius:50%;border:1px solid rgba(18,38,47,.15);
+    background:var(--white);color:var(--navy-800);font-size:.8rem;line-height:1;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:.2s;
+  }
+  .quicknav-arrow:hover{border-color:var(--teal-500);color:var(--teal-700);}
+  .quicknav-inner{
+    flex:1;min-width:0;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+    scroll-behavior:smooth;
+  }
+  .quicknav-inner::-webkit-scrollbar{display:none;}
+  .quicknav a{
+    flex:none;white-space:nowrap;font-size:.78rem;font-weight:700;color:var(--navy-800);
+    background:var(--white);border:1px solid rgba(18,38,47,.1);padding:8px 15px;border-radius:100px;
+    transition:.2s;box-shadow:var(--shadow-sm);
+  }
+  .quicknav a:hover{border-color:var(--teal-500);color:var(--teal-700);}
+  .quicknav a.active{background:var(--navy-950);color:var(--theme-accent);border-color:var(--navy-950);transition:color 0.6s ease, background 0.6s ease, border-color 0.6s ease;}
+  body.season-spring .quicknav a.active { background:#2C5844; color:#FF6B9D; border-color:#2C5844; }
+  body.season-summer .quicknav a.active { background:#1B3A7F; color:#FFD700; border-color:#1B3A7F; }
+  body.season-autumn .quicknav a.active { background:#5C3E1E; color:#FF8C42; border-color:#5C3E1E; }
+  body.season-winter .quicknav a.active { background:#1A2F42; color:#64B5F6; border-color:#1A2F42; }
+  .quicknav a.quicknav-sub{
+    background:transparent;font-weight:500;color:var(--ink-soft);border-style:dashed;font-size:.72rem;
+  }
+  .quicknav a.quicknav-sub:hover{border-color:var(--teal-500);color:var(--teal-700);}
+  .quicknav a.quicknav-sub.active{background:var(--navy-950);color:var(--amber-500);border-color:var(--navy-950);border-style:solid;}
+  
+  /* ===== PRIDE FLAG BUTTON ===== */
+  .quicknav-pride{
+    background:var(--white) !important;
+    color:var(--ink) !important;
+    border:3px solid transparent !important;
+    border-radius:20px !important;
+    background-image:linear-gradient(var(--white), var(--white)), linear-gradient(45deg, #A01010, #CC6600, #CCAA00, #047025, #2D2D99, #552255) !important;
+    background-origin:border-box !important;
+    background-clip:padding-box, border-box !important;
+    font-weight:700;
+    position:relative;
+  }
+  .quicknav-pride:hover{
+    filter:brightness(0.98);
+    color:var(--ink) !important;
+  }
+  .quicknav-pride.active{
+    background:var(--white) !important;
+    color:var(--ink) !important;
+    border:3px solid transparent !important;
+    border-radius:20px !important;
+    background-image:linear-gradient(var(--white), var(--white)), linear-gradient(45deg, #A01010, #CC6600, #CCAA00, #047025, #2D2D99, #552255) !important;
+    background-origin:border-box !important;
+    background-clip:padding-box, border-box !important;
+  }
+  body.season-spring .quicknav-pride,
+  body.season-summer .quicknav-pride,
+  body.season-autumn .quicknav-pride,
+  body.season-winter .quicknav-pride{
+    background:var(--white) !important;
+    color:var(--ink) !important;
+    border:3px solid transparent !important;
+    border-radius:20px !important;
+    background-image:linear-gradient(var(--white), var(--white)), linear-gradient(45deg, #A01010, #CC6600, #CCAA00, #047025, #2D2D99, #552255) !important;
+    background-origin:border-box !important;
+    background-clip:padding-box, border-box !important;
+  }
+  
+  /* Arab Society Button with Violence Symbol */
+  .quicknav-arab{
+    background:var(--white) !important;
+    color:var(--ink) !important;
+    border:3px solid transparent !important;
+    border-radius:20px !important;
+    background-image:linear-gradient(var(--white), var(--white)), linear-gradient(135deg, #00D4D4, #00A8B8) !important;
+    background-origin:border-box !important;
+    background-clip:padding-box, border-box !important;
+    font-weight:700;
+    position:relative;
+    overflow:visible !important;
+  }
+  .quicknav-arab:hover{
+    filter:brightness(0.98);
+  }
+  .quicknav-arab.active{
+    background:var(--white) !important;
+    color:var(--ink) !important;
+    border:3px solid transparent !important;
+    border-radius:20px !important;
+    background-image:linear-gradient(var(--white), var(--white)), linear-gradient(135deg, #00D4D4, #00A8B8) !important;
+    background-origin:border-box !important;
+    background-clip:padding-box, border-box !important;
+  }
+  .quicknav-arab::after{
+    content:'';
+    position:absolute;
+    width:48px;
+    height:48px;
+    background-image:url('violence-symbol.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    top:-12px;
+    right:-12px;
+    opacity:0.9;
+    filter:drop-shadow(2px 2px 6px rgba(0,0,0,0.25));
+  }
+  
+  /* Arab Society Violence Symbol Wrapper */
+  .violence-wrapped{
+    position:relative;
+    padding:32px;
+    border:2px solid rgba(18,38,47,0.1);
+    border-radius:16px;
+    background:rgba(255,255,255,0.6);
+    overflow:hidden;
+  }
+  .violence-wrapped::before{
+    content:'';
+    position:absolute;
+    width:180px;
+    height:180px;
+    background-image:url('violence-symbol.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    top:-50px;
+    left:-50px;
+    opacity:0.07;
+    pointer-events:none;
+    z-index:0;
+  }
+  .violence-wrapped::after{
+    content:'';
+    position:absolute;
+    width:180px;
+    height:180px;
+    background-image:url('violence-symbol.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    bottom:-50px;
+    right:-50px;
+    opacity:0.07;
+    pointer-events:none;
+    z-index:0;
+  }
+  .violence-wrapped p{
+    position:relative;
+    z-index:1;
+  }
+  
+  @media(max-width:640px){
+    .quicknav{top:64px;}
+    .quicknav a{font-size:.72rem;padding:7px 13px;}
+  }
+
+  /* ---------- GROWTH SEAM (illustrative divider between sections) ---------- */
+  .growth-seam{position:relative;height:0;z-index:6;}
+  .growth-seam .growth-dot{
+    position:absolute;top:-20px;right:50%;transform:translateX(50%);
+    width:40px;height:40px;border-radius:50%;background:var(--white);
+    box-shadow:var(--shadow-md);display:flex;align-items:center;justify-content:center;
+    color:var(--teal-600);
+  }
+  .growth-seam .growth-dot svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ---------- GEAR MOTIF (councils' wheels) ---------- */
+  .gear-row{position:absolute;top:22px;inset-inline-end:26px;display:flex;align-items:center;gap:0px;opacity:.14;pointer-events:none;}
+  .gear-row svg{color:var(--teal-600);}
+  .gear-row svg + svg{margin-inline-start:-6px;}
+  @keyframes spin-cw{to{transform:rotate(360deg);}}
+  @keyframes spin-ccw{to{transform:rotate(-360deg);}}
+  .spin-cw{animation:spin-cw 20s linear infinite;}
+  .spin-ccw{animation:spin-ccw 15s linear infinite;}
+
+  /* ---------- GEARS MICRO-INTERACTION (trigger + overlay) ---------- */
+  .sec-h2-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .gears-trigger{
+    display:inline-flex;align-items:center;justify-content:center;flex:none;
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid rgba(18,38,47,.14);background:var(--white);color:var(--teal-700);
+    cursor:pointer;box-shadow:var(--shadow-sm);
+    transition:transform .35s ease, box-shadow .25s ease, border-color .25s ease, color .25s ease;
+  }
+  .gears-trigger span{font-size:16px;line-height:1;}
+  .gears-trigger:hover{transform:rotate(35deg);border-color:var(--teal-500);color:var(--navy-950);box-shadow:var(--shadow-md);}
+  .gears-trigger:active{transform:rotate(70deg) scale(.94);}
+  .gears-trigger:focus-visible{outline:2px solid var(--amber-500);outline-offset:3px;}
+
+  .gears-overlay{
+    position:fixed;inset:0;z-index:300;
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;visibility:hidden;pointer-events:none;
+    transition:opacity .45s ease, visibility 0s linear .45s;
+  }
+  .gears-overlay.open{
+    opacity:1;visibility:visible;pointer-events:auto;
+    transition:opacity .45s ease, visibility 0s linear 0s;
+  }
+  .gears-overlay-backdrop{
+    position:absolute;inset:0;
+    background:rgba(248,246,239,.78);
+    -webkit-backdrop-filter:blur(22px) saturate(140%);
+    backdrop-filter:blur(22px) saturate(140%);
+  }
+  .gears-close{
+    position:absolute;top:22px;inset-inline-end:22px;z-index:2;
+    width:34px;height:34px;border-radius:50%;border:1px solid rgba(18,38,47,.14);
+    background:rgba(255,255,255,.75);color:var(--navy-800);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .gears-close:hover{transform:rotate(90deg);background:var(--white);}
+  .gears-close:focus-visible{outline:2px solid var(--amber-500);outline-offset:3px;}
+
+  .gears-stage{
+    position:relative;z-index:1;width:min(360px,86vw);height:min(300px,60vw);
+    transform:scale(.94);opacity:0;
+    transition:transform .5s cubic-bezier(.22,1,.36,1), opacity .5s ease;
+  }
+  .gears-overlay.open .gears-stage{transform:scale(1);opacity:1;}
+
+  /* four emoji gears, clustered so they visibly touch — sized and centered
+     via left/top + translate(-50%,-50%) so every gear has a known center */
+  .emoji-gear{position:absolute;transform:translate(-50%,-50%);}
+  .gear-glyph{display:block;line-height:1;}
+  .gear-a{left:42%;top:46%;}
+  .gear-a .gear-glyph{font-size:clamp(64px,17vw,96px);}
+  .gear-b{left:61%;top:43%;}
+  .gear-b .gear-glyph{font-size:clamp(44px,12vw,66px);}
+  .gear-c{left:44%;top:66%;}
+  .gear-c .gear-glyph{font-size:clamp(28px,7.5vw,42px);}
+  .gear-d{left:28%;top:48%;}
+  .gear-d .gear-glyph{font-size:clamp(24px,6.5vw,36px);}
+
+  @keyframes gearStuck{
+    0%,100%{transform:rotate(0deg);}
+    18%{transform:rotate(4deg);}
+    36%{transform:rotate(-3.5deg);}
+    54%{transform:rotate(5deg);}
+    72%{transform:rotate(-3deg);}
+    90%{transform:rotate(1.5deg);}
+  }
+  .gears-stage.stuck .gear-a .gear-glyph{animation:gearStuck .6s ease-in-out infinite;}
+  .gears-stage.stuck .gear-b .gear-glyph{animation:gearStuck .6s ease-in-out infinite;animation-delay:-.12s;}
+  .gears-stage.stuck .gear-c .gear-glyph{animation:gearStuck .6s ease-in-out infinite;animation-delay:-.28s;}
+  .gears-stage.stuck .gear-d .gear-glyph{animation:gearStuck .6s ease-in-out infinite;animation-delay:-.4s;}
+
+  @keyframes gearGlow{
+    0%{filter:drop-shadow(0 0 0 rgba(225,160,59,0));}
+    45%{filter:drop-shadow(0 0 9px rgba(225,160,59,.5));}
+    100%{filter:drop-shadow(0 0 2px rgba(225,160,59,.22));}
+  }
+  .gears-stage.spinning .gear-a .gear-glyph{animation:spin-cw 5.5s linear infinite, gearGlow 1.3s ease-out forwards;}
+  .gears-stage.spinning .gear-b .gear-glyph{animation:spin-ccw 4.5s linear infinite, gearGlow 1.3s ease-out .08s forwards;}
+  .gears-stage.spinning .gear-c .gear-glyph{animation:spin-cw 5s linear infinite, gearGlow 1.3s ease-out .16s forwards;}
+  .gears-stage.spinning .gear-d .gear-glyph{animation:spin-ccw 6s linear infinite, gearGlow 1.3s ease-out .24s forwards;}
+
+  /* oil can — pinned at its spout tip so entry and tilt both pivot around
+     the exact point the oil leaves from, directly above the gears' contact point */
+  :root{
+    --oc-x:53%; --oc-y:23%;        /* spout tip's resting position on the stage */
+    --oc-tip-x:12%; --oc-tip-y:86%;/* spout tip's position inside the icon's own box */
+    --contact-y:44%;               /* meeting point between gear-a and gear-b (same x as --oc-x) */
+  }
+  .oil-can{
+    position:absolute;left:var(--oc-x);top:var(--oc-y);
+    width:clamp(38px,13vw,54px);aspect-ratio:1/1;
+    color:var(--navy-800);opacity:0;
+    transform-origin:var(--oc-tip-x) var(--oc-tip-y);
+    transform:translate(calc(var(--oc-tip-x) * -1),calc(var(--oc-tip-y) * -1)) translate(60px,-88px) rotate(6deg);
+    transition:transform .6s cubic-bezier(.22,1,.36,1), opacity .35s ease;
+  }
+  .oil-can-icon{width:100%;height:100%;display:block;fill:currentColor;}
+  .gears-stage.oiling .oil-can{
+    opacity:1;
+    transform:translate(calc(var(--oc-tip-x) * -1),calc(var(--oc-tip-y) * -1)) rotate(-40deg);
+  }
+  .gears-stage.leaving .oil-can{
+    opacity:0;
+    transform:translate(calc(var(--oc-tip-x) * -1),calc(var(--oc-tip-y) * -1)) translate(38px,-22px) rotate(-16deg);
+  }
+
+  .oil-drop{
+    position:absolute;left:var(--oc-x);top:var(--oc-y);width:8px;height:10px;
+    border-radius:50% 50% 50% 0;background:var(--amber-500);
+    opacity:0;transform:translate(-50%,-50%) rotate(45deg) scale(.5);
+  }
+  @keyframes oilDrip{
+    0%{opacity:0;top:var(--oc-y);transform:translate(-50%,-50%) rotate(45deg) scale(.4);}
+    14%{opacity:1;transform:translate(-50%,-50%) rotate(45deg) scale(1);}
+    78%{opacity:1;top:var(--contact-y);transform:translate(-50%,-50%) rotate(45deg) scale(1,1.25);}
+    100%{opacity:0;top:var(--contact-y);transform:translate(-50%,-46%) rotate(0deg) scale(1.5,.45);}
+  }
+  .gears-stage.dripping .drop-1{animation:oilDrip .5s ease-in forwards;}
+  .gears-stage.dripping .drop-2{animation:oilDrip .5s ease-in .18s forwards;}
+  .gears-stage.dripping .drop-3{animation:oilDrip .5s ease-in .36s forwards;}
+
+  body.no-scroll{overflow:hidden;}
+
+  @media(max-width:600px){
+    .oil-can{width:clamp(34px,15vw,46px);}
+  }
+
+  /* ===== PRIDE FLAG WAVE ===== */
+  @media(max-width:760px){.gear-row{display:none;}}
+
+  /* ---------- ARABIC/HEBREW LANGUAGE TOGGLE ---------- */
+  .ab-lang-toggle{display:flex;gap:8px;margin-bottom:16px;}
+  .ab-lang-btn{
+    width:42px;height:42px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);font-size:1.15rem;font-weight:700;
+    font-family:var(--font-ar);cursor:pointer;transition:.2s;
+  }
+  .ab-lang-btn:hover{border-color:var(--amber-500);color:var(--white);}
+  .ab-lang-btn.active{background:var(--amber-500);color:var(--navy-950);border-color:var(--amber-500);}
+  .arabic-block [data-lang-content="ar"]{font-family:var(--font-ar);}
+  .arabic-block [data-lang-content="he"]{font-family:var(--font-body);}
+  .arabic-block [data-lang-content] h3{color:var(--white);font-size:1.5rem;font-weight:700;margin-bottom:22px;}
+  .arabic-block [data-lang-content] p{color:rgba(255,255,255,.86);font-size:1.05rem;line-height:2;margin-bottom:1.15em;}
+  .arabic-block [data-lang-content] p:last-child{margin-bottom:0;}
+  .arabic-block [hidden]{display:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;margin-top:72px;min-height:92vh;overflow:hidden;background:var(--navy-950);isolation:isolate;transition:background 0.6s ease;}
+  body.season-spring .hero { background:#2C5844; }
+  body.season-summer .hero { background:#1B3A7F; }
+  body.season-autumn .hero { background:#5C3E1E; }
+  body.season-winter .hero { background:#1A2F42; }
+  .hero-media{position:absolute;inset:0;z-index:0;background:var(--navy-950);}
+  .hero-poster,
+  .hero-video{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;object-position:center 28%;
+    display:block;
+  }
+  .hero-poster{opacity:.9;z-index:0;}
+  .hero-video{opacity:0;z-index:1;transition:opacity .8s ease;}
+  .hero-video.is-ready{opacity:.9;}
+  @media(min-width:761px){
+    .hero-poster,
+    .hero-video{object-position:center 58%;}
+  }
+  .hero-scrim{
+    position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(120deg, rgba(10,30,44,.94) 8%, rgba(10,30,44,.78) 34%, rgba(10,30,44,.32) 62%, rgba(10,30,44,.08) 88%),
+      linear-gradient(0deg, var(--cream-50) 0%, rgba(10,30,44,0) 20%);
+  }
+  .season-picker{
+    position:absolute;top:20px;left:20px;z-index:6;
+    background:rgba(10,30,44,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px 12px;
+    display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-md);
+  }
+  .season-picker-label{color:rgba(255,255,255,.75);font-size:.72rem;font-weight:600;white-space:nowrap;}
+  .season-picker-btns{display:flex;gap:6px;}
+  .season-btn{
+    width:34px;height:34px;border-radius:10px;border:1.5px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);font-size:1.05rem;line-height:1;cursor:pointer;transition:.2s;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .season-btn:hover{border-color:var(--amber-500);background:rgba(255,255,255,.16);transform:translateY(-2px);transition:.2s;}
+  .season-btn.active{background:var(--amber-500);border-color:var(--amber-500);box-shadow:0 0 0 3px rgba(225,160,59,.25);transition:.2s;}
+  
+  body.season-spring .season-btn.active { background:#FF6B9D; border-color:#FF6B9D; box-shadow:0 0 0 3px rgba(255,107,157,.25); }
+  body.season-summer .season-btn.active { background:#FFD700; border-color:#FFD700; box-shadow:0 0 0 3px rgba(255,215,0,.25); }
+  body.season-autumn .season-btn.active { background:#FF8C42; border-color:#FF8C42; box-shadow:0 0 0 3px rgba(255,140,66,.25); }
+  body.season-winter .season-btn.active { background:#64B5F6; border-color:#64B5F6; box-shadow:0 0 0 3px rgba(100,181,246,.25); }
+  
+  body.season-spring .season-btn:hover { border-color:#FF6B9D; }
+  body.season-summer .season-btn:hover { border-color:#FFD700; }
+  body.season-autumn .season-btn:hover { border-color:#FF8C42; }
+  body.season-winter .season-btn:hover { border-color:#64B5F6; }
+  @media(max-width:640px){
+    .season-picker{top:14px;left:14px;padding:8px 9px;gap:6px;}
+    .season-picker-label{display:none;}
+    .season-btn{width:30px;height:30px;font-size:.95rem;}
+  }
+
+  /* ---------- SEASON FX OVERLAY ---------- */
+  #seasonFX{position:fixed;inset:0;z-index:40;pointer-events:none;overflow:hidden;}
+  #seasonFX::after{content:"";position:absolute;inset:0;background:var(--season-tint, transparent);transition:background .6s ease;}
+  body.season-winter{--season-tint: rgba(120,170,220,.05);}
+  body.season-summer{--season-tint: rgba(230,180,80,.05);}
+  body.season-autumn{--season-tint: rgba(190,120,60,.05);}
+  body.season-spring{--season-tint: rgba(255,170,200,.05);}
+  .fx-particle{position:absolute;will-change:transform,opacity;}
+  .fx-leaf, .fx-petal{top:-40px;font-size:1.4rem;animation:fx-fall-sway linear forwards;}
+  .fx-rain{top:-40px;width:2px;height:26px;border-radius:2px;
+    background:linear-gradient(to bottom, rgba(160,200,255,0), rgba(160,200,255,.85));
+    animation:fx-rain-fall linear forwards;}
+  .fx-spark{bottom:-30px;font-size:1.1rem;animation:fx-rise-fade linear forwards;}
+  @keyframes fx-fall-sway{
+    0%{transform:translateY(-10vh) translateX(0) rotate(0deg);}
+    50%{transform:translateY(50vh) translateX(30px) rotate(180deg);}
+    100%{transform:translateY(110vh) translateX(-20px) rotate(360deg);}
+  }
+  @keyframes fx-rain-fall{
+    0%{transform:translateY(-10vh) translateX(0);}
+    100%{transform:translateY(110vh) translateX(-40px);}
+  }
+  @keyframes fx-rise-fade{
+    0%{transform:translateY(0) scale(.6);opacity:0;}
+    15%{opacity:1;}
+    100%{transform:translateY(-90vh) scale(1.1);opacity:0;}
+  }
+
+  .hero-inner{
+    position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:150px 28px 96px;
+    min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+    text-align:right;gap:26px;
+  }
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:9px;background:rgba(225,160,59,.14);
+    border:1px solid rgba(225,160,59,.45);color:var(--amber-500);font-size:.82rem;font-weight:700;
+    padding:9px 20px;border-radius:100px;backdrop-filter:blur(8px);letter-spacing:.01em;
+  }
+  .hero-title{display:flex;flex-direction:column;gap:0;}
+  .hero-title span{
+    font-family:var(--font-display);font-weight:800;color:var(--white);
+    font-size:clamp(3.4rem, 13vw, 10.5rem);line-height:0.98;letter-spacing:0;
+    text-shadow:0 8px 34px rgba(0,0,0,.35);
+  }
+  .hero-sub{
+    max-width:520px;color:rgba(255,255,255,.88);font-size:1.05rem;line-height:1.7;
+    background:rgba(10,30,44,.4);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    padding:20px 24px;border-radius:16px;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow-lg);
+  }
+  .hero-sub strong{color:var(--amber-500);}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-start;}
+  .hero-btn{
+    display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:14px 28px;
+    border-radius:100px;font-size:.94rem;transition:.25s;
+  }
+  .hero-btn-primary{background:var(--amber-500);color:var(--navy-950);box-shadow:0 10px 26px rgba(225,160,59,.35);}
+  .hero-btn-primary:hover{background:var(--amber-600);transform:translateY(-2px);}
+  .hero-btn-ghost{background:rgba(255,255,255,.06);color:var(--white);border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(8px);}
+  .hero-btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.14);}
+  .hero-scroll{
+    position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;
+    display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.6);
+    font-size:.72rem;letter-spacing:.04em;
+  }
+  .hero-scroll svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;animation:bob 2s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+  @media(max-width:640px){
+    .hero{margin-top:64px;min-height:96vh;}
+    .hero-inner{padding:120px 20px 80px;align-items:flex-start;min-height:96vh;}
+    .hero-sub{padding:16px 18px;font-size:.98rem;}
+    .hero-actions{width:100%;}
+    .hero-btn{flex:1 1 auto;justify-content:center;}
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{position:relative;padding:100px 0;}
+  .bg-cream{background:var(--cream-50);}
+  
+  /* ===== ARAB SOCIETY SECTION ===== */
+  #arab-society{
+    background:var(--navy-950);
+    color:rgba(255,255,255,.88);
+  }
+  #arab-society .sec-head h2{
+    color:var(--white);
+  }
+  #arab-society .sec-head .sec-tag{
+    background:rgba(255,255,255,.1);
+    color:var(--teal-300);
+  }
+  #arab-society .sec-sub{
+    color:var(--teal-300);
+  }
+  #arab-society .ab-tag{
+    color:var(--teal-300);
+    font-weight:700;
+    font-size:.82rem;
+    margin-bottom:16px;
+    display:block;
+    background:rgba(255,255,255,.08);
+    padding:8px 14px;
+    border-radius:8px;
+    width:fit-content;
+  }
+  #arab-society h3{
+    color:var(--white);
+    background:rgba(0, 212, 212, 0.12);
+    padding:16px 22px;
+    border-radius:var(--radius) var(--radius) 0 0;
+    margin:-22px -22px 22px -22px;
+    margin-inline-start:-22px;
+    font-size:1.3rem;
+    border-inline-start:4px solid #00D4D4;
+    font-weight:700;
+  }
+  #arab-society .prose p{
+    color:rgba(255,255,255,.78);
+  }
+  #arab-society .prose strong{
+    color:var(--white);
+  }
+  #arab-society .foot{
+    color:var(--ink-soft);
+    font-size:.85rem;
+    margin-top:12px;
+  }
+  
+  /* ===== ARAB VALUES CARDS ===== */
+  .arab-values-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+    margin:32px 0 40px;
+  }
+  @media(max-width:800px){
+    .arab-values-grid{
+      grid-template-columns:1fr;
+    }
+  }
+  
+  .arab-value-card{
+    background:var(--white);
+    border-radius:var(--radius);
+    padding:24px;
+    border-inline-start:4px solid #00D4D4;
+    box-shadow:var(--shadow-sm);
+    text-align:center;
+    transition:transform .3s ease, box-shadow .3s ease;
+  }
+  .arab-value-card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow-md);
+  }
+  
+  .arab-value-icon{
+    font-size:2.5rem;
+    margin-bottom:12px;
+    display:block;
+    line-height:1;
+  }
+  
+  .arab-value-card h4{
+    color:var(--navy-950);
+    font-size:1.1rem;
+    font-weight:700;
+    margin:0 0 8px;
+  }
+  
+  .arab-value-card p{
+    color:var(--ink-soft);
+    font-size:.95rem;
+    line-height:1.6;
+    margin:0;
+  }
+  
+  #arab-society .arabic-block{
+    margin-top:8px;
+  }
+  
+  #arab-society .ab-lang-toggle{
+    display:flex;
+    gap:8px;
+    margin-bottom:16px;
+  }
+  
+  #arab-society .ab-lang-btn{
+    color:var(--ink);
+    border-color:rgba(0, 212, 212, 0.4);
+    background:var(--white);
+  }
+  #arab-society .ab-lang-btn:hover{
+    border-color:var(--teal-300);
+    color:var(--navy-950);
+    background:rgba(0, 212, 212, 0.1);
+  }
+  #arab-society .ab-lang-btn.active{
+    background:#00D4D4;
+    color:var(--navy-950);
+    border-color:#00D4D4;
+  }
+  
+  #arab-society .ab-content{
+    color:var(--ink-soft);
+  }
+  #arab-society .violence-wrapped{
+    background:var(--white);
+    border-radius:var(--radius);
+    border-inline-start:4px solid #00D4D4;
+    box-shadow:var(--shadow-sm);
+    padding:22px;
+    color:var(--ink-soft);
+  }
+  #arab-society .violence-wrapped p{
+    color:var(--ink-soft);
+    margin:0 0 14px 0;
+  }
+  #arab-society .violence-wrapped p:last-child{
+    margin-bottom:0;
+  }
+  #arab-society .violence-wrapped::before,
+  #arab-society .violence-wrapped::after{
+    display:none;
+  }
+  .bg-mint{background:var(--mint-100);}
+  .bg-white{background:var(--white);}
+  .bg-navy{background:var(--navy-950);color:rgba(255,255,255,.88);transition:background 0.6s ease;}
+  body.season-spring .bg-navy { background:#2C5844; }
+  body.season-summer .bg-navy { background:#1B3A7F; }
+  body.season-autumn .bg-navy { background:#5C3E1E; }
+  body.season-winter .bg-navy { background:#1A2F42; }
+  .bg-navy strong{color:var(--white);}
+
+  #opening{position:relative;}
+
+  .sec-head{max-width:760px;margin:0 0 48px;}
+  .sec-tag{
+    display:inline-flex;align-items:center;gap:6px;color:var(--teal-600);font-weight:700;font-size:.82rem;
+    letter-spacing:.03em;margin-bottom:10px;background:var(--mint-50);padding:5px 12px;border-radius:100px;
+  }
+  .tag-emoji{font-size:.95em;line-height:1;}
+  .bg-navy .sec-tag{color:var(--teal-300);background:rgba(255,255,255,.08);}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);color:var(--navy-950);position:relative;padding-bottom:16px;}
+  .bg-navy .sec-head h2{color:var(--white);}
+  .sec-head h2::after{
+    content:"";position:absolute;bottom:0;right:0;width:56px;height:4px;
+    background:var(--amber-500);border-radius:4px;
+  }
+  .sec-lede{color:var(--ink-soft);font-size:1.06rem;line-height:1.7;margin-top:18px;max-width:680px;}
+  .bg-navy .sec-lede{color:rgba(255,255,255,.72);}
+  .sec-sub{color:var(--amber-500);font-weight:700;font-size:.92rem;letter-spacing:.01em;margin-top:10px;}
+  
+  /* ===== ARAB SOCIETY SYMBOL ===== */
+  .arab-symbol{
+    filter:drop-shadow(0 4px 12px rgba(0, 212, 212, 0.25));
+    transition:transform .3s ease, filter .3s ease;
+  }
+  .sec-head:hover .arab-symbol{
+    transform:rotate(-5deg) scale(1.05);
+    filter:drop-shadow(0 8px 20px rgba(0, 212, 212, 0.35));
+  }
+
+  .prose p{color:var(--ink-soft);font-size:1.02rem;line-height:1.78;max-width:760px;}
+  .prose strong{color:var(--navy-950);}
+  .bg-navy .prose p{color:rgba(255,255,255,.78);}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- CONFERENCE-STATEMENT STICKER BADGE ---------- */
+  .conf-badge-anchor{position:relative;}
+  .conf-badge{
+    position:absolute;
+    top:-14px;left:-12px;
+    background:var(--amber-500);
+    color:var(--navy-950);
+    font-family:var(--font-body);
+    font-size:.7rem;
+    font-weight:800;
+    line-height:1.3;
+    padding:7px 11px;
+    border-radius:8px;
+    box-shadow:0 6px 14px rgba(10,30,44,.22);
+    transform:rotate(-5deg);
+    max-width:150px;
+    text-align:center;
+    z-index:6;
+    border:1px solid rgba(255,255,255,.5);
+  }
+  .conf-badge::after{
+    content:"";
+    position:absolute;
+    bottom:-5px;right:14px;
+    width:10px;height:10px;
+    background:inherit;
+    border-inline-end:1px solid rgba(255,255,255,.5);
+    border-block-end:1px solid rgba(255,255,255,.5);
+    transform:rotate(45deg);
+    z-index:-1;
+  }
+  @media (max-width:640px){
+    .conf-badge{
+      position:static;
+      display:table;
+      top:auto;left:auto;
+      transform:rotate(-2deg);
+      margin:0 0 12px;
+      font-size:.68rem;
+      padding:6px 10px;
+      max-width:none;
+    }
+    .conf-badge::after{display:none;}
+  }
+
+  /* ---------- CARD LIST (bullets) ---------- */
+  .card-list{display:grid;gap:16px;margin-top:8px;}
+  .card{
+    background:var(--white);border-radius:var(--radius);
+    padding:24px 26px;box-shadow:var(--shadow-sm);
+    border-inline-start:4px solid var(--teal-500);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+  .card p{margin:0;color:var(--ink-soft);font-size:.98rem;line-height:1.72;}
+  .card strong{color:var(--navy-950);}
+  .card-amber{border-inline-start-color:var(--amber-500);}
+  .bg-navy .card{background:rgba(255,255,255,0.06);box-shadow:none;}
+  .bg-navy .card p{color:rgba(255,255,255,.82);}
+  .bg-navy .card strong{color:var(--white);}
+  .bg-mint .card{background:var(--white);}
+
+  /* lettered sub list */
+  .lettered{display:grid;gap:14px;margin-top:22px;}
+  .lettered li{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--mint-50);border-radius:14px;padding:16px 18px;
+  }
+  .lettered .letter{
+    flex:none;width:30px;height:30px;border-radius:9px;background:var(--navy-950);color:var(--amber-500);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;font-family:var(--font-body);
+  }
+  .lettered p{margin:0;color:var(--ink-soft);font-size:.96rem;line-height:1.7;}
+
+  /* square focus grid */
+  .square-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px;}
+  @media(max-width:760px){.square-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.square-grid{grid-template-columns:1fr;}}
+  .square-grid-compact{grid-template-columns:repeat(4,1fr);max-width:640px;gap:12px;}
+  @media(max-width:760px){.square-grid-compact{grid-template-columns:repeat(2,1fr);}}
+  .lgbt-section{
+    padding:56px 0;
+    border-top:6px solid;
+    border-image:linear-gradient(90deg, #E40303, #FF8C00, #FFFF41, #06B925, #4D4DFF, #762082) 1;
+    background:linear-gradient(180deg, rgba(228,3,3,0.04), rgba(6,185,37,0.03) 45%, rgba(77,77,255,0.04));
+  }
+  .lgbt-value-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px;
+  }
+  @media(max-width:760px){.lgbt-value-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:480px){.lgbt-value-grid{grid-template-columns:1fr;}}
+  .lgbt-value-card{
+    background:var(--white);border-radius:var(--radius);padding:22px 18px;
+    box-shadow:var(--shadow-sm);text-align:center;
+    border-top:4px solid var(--card-accent, #E40303);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .lgbt-value-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+  .lgbt-value-icon{
+    font-size:2rem;margin:0 auto 10px;display:block;line-height:1;
+  }
+  .lgbt-value-card p{margin:0;color:var(--ink-soft);font-size:.88rem;line-height:1.6;}
+
+  /* ===== UNITY / SHARED SOCIETY ===== */
+  .unity-section{position:relative;overflow:hidden;}
+  .unity-section::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(620px 340px at 8% -10%, rgba(130,192,196,.16), transparent 70%),
+      radial-gradient(520px 420px at 96% 108%, rgba(225,160,59,.12), transparent 70%);
+  }
+  body.season-spring .unity-section::before{
+    background:
+      radial-gradient(620px 340px at 8% -10%, rgba(255,107,157,.14), transparent 70%),
+      radial-gradient(520px 420px at 96% 108%, rgba(78,205,196,.14), transparent 70%);
+  }
+  body.season-summer .unity-section::before{
+    background:
+      radial-gradient(620px 340px at 8% -10%, rgba(0,188,212,.16), transparent 70%),
+      radial-gradient(520px 420px at 96% 108%, rgba(255,215,0,.12), transparent 70%);
+  }
+  body.season-autumn .unity-section::before{
+    background:
+      radial-gradient(620px 340px at 8% -10%, rgba(255,140,66,.16), transparent 70%),
+      radial-gradient(520px 420px at 96% 108%, rgba(210,105,30,.12), transparent 70%);
+  }
+  body.season-winter .unity-section::before{
+    background:
+      radial-gradient(620px 340px at 8% -10%, rgba(100,181,246,.16), transparent 70%),
+      radial-gradient(520px 420px at 96% 108%, rgba(179,229,252,.12), transparent 70%);
+  }
+  .unity-value-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px;
+    position:relative;z-index:2;
+  }
+  @media(max-width:800px){.unity-value-grid{grid-template-columns:1fr;gap:34px;}}
+  .unity-value-card{
+    position:relative;background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.10);border-radius:var(--radius);
+    padding:32px 26px 28px;text-align:center;
+    transition:transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .unity-value-card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,255,255,.085);
+    border-color:rgba(130,192,196,.4);
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+  }
+  .unity-value-icon{
+    width:58px;height:58px;border-radius:50%;margin:0 auto 18px;position:relative;z-index:2;
+    display:flex;align-items:center;justify-content:center;font-size:1.55rem;
+    background:linear-gradient(150deg, rgba(130,192,196,.28), rgba(225,160,59,.16));
+    border:1.5px solid rgba(255,255,255,.16);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.03);
+  }
+  .unity-connector{
+    position:absolute;top:61px;inset-inline-start:calc(50% + 29px);width:calc(100% - 29px);height:2px;
+    background:repeating-linear-gradient(to left, var(--teal-300) 0 6px, transparent 6px 12px);
+    z-index:1;opacity:.5;
+  }
+  .unity-value-card:last-child .unity-connector{display:none;}
+  @media(max-width:800px){
+    .unity-connector{
+      top:auto;bottom:-24px;inset-inline-start:50%;transform:translateX(50%);
+      width:2px;height:24px;
+      background:repeating-linear-gradient(to bottom, var(--teal-300) 0 6px, transparent 6px 12px);
+    }
+  }
+  .unity-value-card h4{margin:0 0 10px;font-size:1.04rem;color:var(--white);}
+  .unity-value-card p{margin:0;color:rgba(255,255,255,.74);font-size:.9rem;line-height:1.68;}
+  .square{
+    aspect-ratio:1/1;background:var(--white);border-radius:var(--radius);
+    border-inline-start:4px solid var(--amber-500);box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    padding:22px;transition:transform .25s, box-shadow .25s;
+  }
+  .square:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
+  .square p{margin:0;color:var(--ink-soft);font-size:.95rem;line-height:1.65;}
+  .square-sm{padding:14px;border-inline-start-width:3px;}
+  .square-sm p{font-size:.8rem;line-height:1.6;}
+
+  /* grid of 3 */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px;}
+  @media(max-width:800px){.grid-3{grid-template-columns:1fr;}}
+  .tile{
+    background:var(--white);border-radius:var(--radius);padding:26px 22px;
+    box-shadow:var(--shadow-sm);text-align:center;transition:.25s;
+  }
+  .tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+  .tile-num{
+    width:40px;height:40px;border-radius:12px;background:var(--mint-100);color:var(--teal-700);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.3rem;line-height:1;
+  }
+  .tile h4{font-family:var(--font-body);font-weight:700;color:var(--navy-950);font-size:1.02rem;margin-bottom:8px;}
+  .tile p{color:var(--ink-soft);font-size:.92rem;line-height:1.65;margin:0;}
+
+  /* ---------- JOURNEY MAP (5 stations, right after hero) ---------- */
+  .journey-section{padding:76px 0 84px;}
+  .journey-head{max-width:640px;margin:0 auto 44px;text-align:center;}
+  .journey-head .sec-tag{margin-inline:auto;}
+  .journey-head h2{font-size:clamp(1.5rem,3.2vw,2.15rem);}
+  .journey-head h2::after{right:50%;transform:translateX(50%);}
+  .journey-head .sec-lede{margin-inline:auto;text-align:center;}
+  .journey-path{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;
+    counter-reset:station;max-width:1080px;margin:0 auto;
+  }
+  .journey-stop{
+    position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;
+    padding:0 14px;
+  }
+  .journey-stop::before{
+    counter-increment:station;content:counter(station);
+    position:absolute;top:-9px;inset-inline-end:calc(50% - 46px);
+    width:22px;height:22px;border-radius:50%;background:var(--amber-500);color:var(--navy-950);
+    font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 0 4px var(--navy-950);
+  }
+  .journey-icon{
+    width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.07);
+    border:1.5px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;
+    font-size:1.7rem;margin-bottom:16px;position:relative;z-index:2;flex:none;
+  }
+  .journey-connector{
+    position:absolute;top:32px;inset-inline-start:50%;width:100%;height:2px;
+    background:repeating-linear-gradient(to left, var(--teal-300) 0 6px, transparent 6px 12px);
+    z-index:1;
+  }
+  .journey-stop:last-child .journey-connector{display:none;}
+  .journey-stop h4{font-family:var(--font-body);font-weight:700;color:var(--white);font-size:.94rem;margin-bottom:6px;}
+  .journey-stop p{color:rgba(255,255,255,.68);font-size:.82rem;line-height:1.6;margin:0;}
+  @media(max-width:900px){
+    .journey-path{grid-template-columns:1fr;gap:34px;max-width:420px;}
+    .journey-connector{top:auto;bottom:-24px;inset-inline-start:auto;right:50%;transform:translateX(50%);
+      width:2px;height:24px;
+      background:repeating-linear-gradient(to bottom, var(--teal-300) 0 6px, transparent 6px 12px);}
+    .journey-stop::before{inset-inline-end:calc(50% - 46px);}
+  }
+
+  /* ---------- OPENING LETTER ---------- */
+  .letter-wrap{position:relative;}
+  .letter-body p{font-size:1.06rem;line-height:1.8;color:var(--ink);max-width:760px;}
+  .value-list{
+    clear:both;
+    margin:34px 0;border-inline-start:3px solid var(--teal-300);padding-inline-start:26px;display:grid;gap:16px;
+  }
+  .value-list li{color:var(--ink-soft);font-size:1.02rem;line-height:1.6;position:relative;}
+  .value-list li::before{
+    content:"";position:absolute;right:-32px;top:10px;width:9px;height:9px;border-radius:50%;background:var(--teal-500);
+  }
+  .value-list li.highlight{
+    background:var(--navy-950);color:var(--white);padding:16px 18px;border-radius:12px;font-weight:600;
+  }
+  .value-list li.highlight::before{background:var(--amber-500);top:22px;}
+  .value-list li.highlight strong{color:var(--amber-500);}
+  .signature{
+    margin-top:44px;padding-top:28px;border-top:1px solid rgba(18,38,47,.12);
+    display:flex;align-items:center;gap:16px;
+  }
+  .signature-avatar{
+    width:54px;height:54px;border-radius:50%;background:var(--navy-950);color:var(--amber-500);
+    display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;flex:none;
+  }
+  .signature strong{display:block;color:var(--navy-950);font-size:1.02rem;}
+  .signature span{color:var(--ink-soft);font-size:.88rem;}
+  .experience-block{margin-top:52px;padding-top:44px;border-top:1px solid rgba(18,38,47,.1);}
+
+  /* ---------- INTRO BLOCK (photo + short bio, above the experience timeline) ---------- */
+  .intro-block{margin-top:52px;padding-top:44px;border-top:1px solid rgba(18,38,47,.1);}
+  .intro-flex{display:flex;align-items:center;gap:32px;margin-top:8px;}
+  .intro-photo{flex:none;}
+  .intro-photo img{
+    width:168px;height:168px;border-radius:50%;object-fit:cover;
+    border:4px solid var(--white);box-shadow:var(--shadow-md), 0 0 0 3px var(--amber-500);
+  }
+  .intro-text{flex:1;min-width:0;}
+  .intro-text p{font-size:1.02rem;line-height:1.8;color:var(--ink);}
+  .intro-text p:last-child{margin-bottom:0;}
+  @media(max-width:640px){
+    .intro-flex{flex-direction:column;text-align:center;gap:20px;}
+    .intro-photo img{width:140px;height:140px;}
+  }
+
+  /* ---------- KNESSET GALLERY (photos alongside the "מצע לנוער" poster) ---------- */
+  .knesset-gallery{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+    margin:0 0 44px;
+  }
+  .kg-item{
+    margin:0;background:rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;
+    box-shadow:var(--shadow-md);border:1px solid rgba(255,255,255,0.08);
+  }
+  .kg-item img{
+    width:100%;height:280px;object-fit:cover;object-position:top center;display:block;
+  }
+  @media(max-width:860px){
+    .knesset-gallery{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:560px){
+    .knesset-gallery{grid-template-columns:1fr;}
+    .kg-item img{height:300px;}
+  }
+
+  /* ---------- ARABIC BLOCK ---------- */
+  .arabic-block{
+    background:var(--navy-950);border-radius:24px;padding:44px 38px;margin-top:44px;
+    box-shadow:var(--shadow-md);
+  }
+  .arabic-block .ab-tag{color:var(--amber-500);font-weight:700;font-size:.82rem;margin-bottom:10px;display:block;}
+  .arabic-block .foot{color:rgba(255,255,255,.45);font-size:.78rem;margin-top:18px;font-family:var(--font-body);}
+
+  /* ---------- PROCESS TIMELINE ---------- */
+  .timeline-head{margin:52px 0 26px;}
+  .timeline-head .tl-title{font-size:1.3rem;color:var(--navy-950);font-family:var(--font-display);}
+  .timeline-head p{color:var(--ink-soft);font-size:.92rem;line-height:1.65;margin-top:8px;max-width:640px;}
+  .tl-phase{margin-bottom:32px;}
+  .tl-phase-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+  .tl-phase-chip{
+    display:inline-flex;align-items:center;gap:9px;background:var(--mint-50);
+    border-radius:100px;padding:7px 16px;font-weight:700;font-size:.86rem;color:var(--navy-950);
+  }
+  .tl-phase-chip::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--phase-color,var(--teal-500));display:inline-block;}
+  .tl-items{
+    border-inline-start:3px solid var(--phase-color-soft, var(--mint-100));
+    padding-inline-start:26px;display:grid;gap:14px;margin-inline-start:5px;
+  }
+  .tl-item{position:relative;background:var(--white);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow-sm);}
+  .tl-item::before{
+    content:"";position:absolute;right:-32px;top:22px;width:11px;height:11px;border-radius:3px;
+    background:var(--phase-color,var(--teal-500));border:2px solid var(--white);
+  }
+  .tl-date{
+    display:inline-block;font-weight:700;color:var(--navy-950);font-size:.76rem;
+    background:var(--mint-100);padding:3px 11px;border-radius:100px;margin-bottom:9px;letter-spacing:.02em;
+  }
+  .tl-item p{margin:0;color:var(--ink-soft);font-size:.93rem;line-height:1.65;}
+  .tl-item .tl-sub{margin:8px 0 0;padding-inline-start:16px;border-inline-start:2px solid var(--mint-100);display:grid;gap:4px;}
+  .tl-item .tl-sub span{display:block;font-size:.87rem;color:var(--ink-soft);}
+  .tl-item .tl-note{display:block;margin-top:8px;font-size:.8rem;color:var(--teal-700);}
+
+  .model-toggle{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;
+    margin-top:36px;background:var(--navy-950);color:var(--white);border:none;cursor:pointer;
+    padding:20px 26px;border-radius:16px;font-family:var(--font-body);font-weight:700;font-size:1rem;
+    box-shadow:var(--shadow-sm);transition:.25s;
+  }
+  .model-toggle:hover{background:var(--navy-800);}
+  .model-toggle-arrow{transition:transform .3s ease;font-size:1.1rem;color:var(--amber-500);flex:none;}
+  .model-toggle[aria-expanded="true"] .model-toggle-arrow{transform:rotate(180deg);}
+  .model-panel{
+    display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease;
+  }
+  .model-panel-inner{overflow:hidden;min-height:0;}
+  .model-panel.open{grid-template-rows:1fr;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-950);color:rgba(255,255,255,.7);padding:70px 0 30px;}
+  .footer-cta{text-align:center;padding-bottom:44px;margin-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-cta-title{font-family:var(--font-ploni);color:var(--white);font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px;font-weight:800;}
+  .footer-cta p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:26px;}
+  .footer-contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .footer-contact-btn{
+    display:inline-flex;align-items:center;gap:8px;background:var(--amber-500);color:var(--navy-950);
+    font-weight:700;padding:13px 26px;border-radius:100px;font-size:.92rem;transition:.25s;box-shadow:var(--shadow-md);
+  }
+  .footer-contact-btn:hover{background:var(--amber-600);transform:translateY(-2px);}
+  .footer-contact-btn-ghost{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35);box-shadow:none;}
+  .footer-contact-btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+  .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px;border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:40px;}
+  .footer-brand h3{color:var(--white);font-size:1.6rem;margin-bottom:10px;}
+  .footer-brand p{max-width:380px;color:rgba(255,255,255,.6);font-size:.92rem;line-height:1.7;}
+  .footer-nav{display:flex;flex-wrap:wrap;gap:10px 26px;max-width:420px;}
+  .footer-nav a{color:rgba(255,255,255,.65);font-size:.88rem;}
+  .footer-nav a:hover{color:var(--amber-500);}
+  .footer-bottom{padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:rgba(255,255,255,.42);}
+  .footer-signoff{margin-top:28px;padding-top:26px;border-top:1px solid rgba(255,255,255,.08);text-align:center;}
+  .footer-signoff p{font-family:var(--font-display);font-size:clamp(1.05rem,2.6vw,1.5rem);color:rgba(255,255,255,.92);letter-spacing:.01em;}
+  .footer-signoff strong{color:var(--amber-500);}
+
+  /* back to top */
+  #toTop{
+    position:fixed;bottom:26px;left:26px;z-index:90;width:46px;height:46px;border-radius:50%;
+    background:var(--navy-950);color:var(--amber-500);display:flex;align-items:center;justify-content:center;
+    box-shadow:var(--shadow-md);opacity:0;pointer-events:none;transition:.3s;border:none;cursor:pointer;
+  }
+  #toTop.show{opacity:1;pointer-events:auto;}
+  #toTop svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;}
+
+  /* ---------- GROWTH PROGRESS MOTIF (site-wide) ---------- */
+  .growth-topbar{
+    position:fixed;top:0;inset-inline:0;height:3px;z-index:150;
+    background:rgba(18,38,47,.08);pointer-events:none;
+  }
+  .growth-topbar-fill{
+    height:100%;width:0%;border-radius:0 3px 3px 0;
+    background:linear-gradient(to left, var(--amber-500), var(--teal-500), var(--teal-300));
+    transition:width .08s linear;
+  }
+
+  .growth-rail{
+    position:fixed;top:50%;inset-inline-end:20px;transform:translateY(-50%);z-index:95;
+    height:min(56vh,480px);display:flex;align-items:stretch;pointer-events:none;
+  }
+  .growth-rail-track{position:relative;width:3px;margin:0 auto;background:rgba(18,38,47,.12);border-radius:3px;}
+  .growth-rail-fill{
+    position:absolute;top:0;inset-inline-start:0;width:100%;height:0%;border-radius:3px;
+    background:linear-gradient(to bottom, var(--amber-500), var(--teal-600));
+    transition:height .1s linear;
+  }
+  .growth-stop{
+    position:absolute;inset-inline-end:-8px;transform:translateY(-50%);
+    display:flex;align-items:center;gap:9px;pointer-events:auto;
+  }
+  .growth-stop-icon{
+    flex:none;width:19px;height:19px;border-radius:50%;background:var(--cream-50);
+    border:1.5px solid rgba(18,38,47,.18);display:flex;align-items:center;justify-content:center;
+    font-size:.66rem;line-height:1;transition:transform .25s, border-color .25s, background .25s, box-shadow .25s;
+  }
+  .growth-stop-label{
+    font-size:.72rem;font-weight:700;color:var(--ink-soft);white-space:nowrap;opacity:0;
+    transform:translateX(6px);transition:opacity .25s, transform .25s;
+    background:var(--cream-50);padding:3px 9px;border-radius:100px;box-shadow:var(--shadow-sm);
+  }
+  [dir="rtl"] .growth-stop-label{transform:translateX(-6px);}
+  .growth-stop.reached .growth-stop-icon{
+    background:var(--teal-600);border-color:var(--teal-600);box-shadow:0 0 0 3px rgba(60,140,153,.18);
+  }
+  .growth-stop.current .growth-stop-icon{
+    transform:scale(1.35);background:var(--amber-500);border-color:var(--amber-500);
+    box-shadow:0 0 0 4px rgba(225,160,59,.22);
+  }
+  .growth-stop.current .growth-stop-label{opacity:1;transform:translateX(0);color:var(--navy-950);}
+  @media(max-width:900px){
+    .growth-rail{display:none;}
+  }
+
+  @media(max-width:640px){
+    section{padding:70px 0;}
+    .arabic-block{padding:30px 22px;}
+  }
+</style>
+</head>
+<body>
+<div class="growth-topbar" aria-hidden="true"><div class="growth-topbar-fill" id="growthTopFill"></div></div>
+
+<div class="growth-rail" id="growthRail" aria-hidden="true">
+  <div class="growth-rail-track" id="growthRailTrack">
+    <div class="growth-rail-fill" id="growthRailFill"></div>
+    <div class="growth-stop" data-target="top"><span class="growth-stop-icon">🌰</span><span class="growth-stop-label">רעיון</span></div>
+    <div class="growth-stop" data-target="opening"><span class="growth-stop-icon">🌱</span><span class="growth-stop-label">שטח</span></div>
+    <div class="growth-stop" data-target="wheels"><span class="growth-stop-icon">🌿</span><span class="growth-stop-label">ארגון</span></div>
+    <div class="growth-stop" data-target="knesset"><span class="growth-stop-icon">🌳</span><span class="growth-stop-label">השפעה</span></div>
+    <div class="growth-stop" data-target="violence"><span class="growth-stop-icon">🌲</span><span class="growth-stop-label">חברה צודקת</span></div>
+  </div>
+</div>
+<div id="seasonFX" aria-hidden="true"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <span class="logo-main">בתנועה ובצמיחה</span>
+      <span class="logo-sub">רותם גטריידה ליו״ר מועצת התלמידים והנוער הארצית</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="פתיחת תפריט ניווט" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#journey">מפת המסע</a>
+      <a href="#opening">פתיחה</a>
+      <a href="#wheels">גלגלי המועצות</a>
+      <a href="#districts">המחוזות</a>
+      <a href="#secretariat">מזכירות</a>
+      <a href="#plenum">מליאה</a>
+      <a href="#knesset">כנסת</a>
+      <a href="#government">משרדי הממשלה</a>
+      <a href="#public-transport" class="nav-sub">↳ תחבורה ציבורית</a>
+      <a href="#education">משרד החינוך</a>
+      <a href="#civil">חברה אזרחית</a>
+      <a href="#violence">אלימות ופשיעה</a>
+      <a href="#arab-society">החברה הערבית</a>
+      <a href="#lgbt">הקהילה הגאה</a>
+      <a href="#shared-dialogue">אחדות החברה</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-media">
+    <img
+      class="hero-poster"
+      src="assets/images/hero-turbines-train-poster.jpg"
+      alt=""
+      aria-hidden="true"
+    >
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster="assets/images/hero-turbines-train-poster.jpg"
+      data-src="assets/video/hero-turbines-train-loop.mp4"
+    ></video>
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="season-picker" role="group" aria-label="בחרו עונה - האפקט ישתנה בכל האתר">
+    <span class="season-picker-label">איזה שלב צמיחה אתה?</span>
+    <div class="season-picker-btns">
+      <button type="button" class="season-btn" data-season="spring" aria-pressed="false" title="אביב">🌸</button>
+      <button type="button" class="season-btn" data-season="summer" aria-pressed="false" title="קיץ">☀️</button>
+      <button type="button" class="season-btn" data-season="autumn" aria-pressed="false" title="סתיו">🍂</button>
+      <button type="button" class="season-btn" data-season="winter" aria-pressed="false" title="חורף">🌧️</button>
+    </div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-title">
+      <span>בִּתְנוּעָה</span>
+      <span>וּבִצְמִיחָה</span>
+    </div>
+  </div>
+  <a href="#opening" class="hero-scroll" aria-label="גלילה לתוכן">
+    <span>גללו למטה</span>
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</header>
+
+<nav class="quicknav" id="quicknav" aria-label="ניווט מהיר בין פרקי המצע">
+  <div class="quicknav-bar">
+    <button type="button" class="quicknav-arrow" data-dir="-1" aria-label="גלילה שמאלה">❮</button>
+    <div class="quicknav-inner" id="quicknavInner">
+      <a href="#journey">מפת המסע</a>
+      <a href="#opening">פתיחה</a>
+      <a href="#experience">מי אני?</a>
+      <a href="#wheels">גלגלי המועצות</a>
+      <a href="#districts">המחוזות</a>
+      <a href="#secretariat">מזכירות</a>
+      <a href="#plenum">מליאה</a>
+      <a href="#knesset">כנסת</a>
+      <a href="#government">משרדי הממשלה</a>
+      <a href="#public-transport" class="quicknav-sub">↳ תחבורה ציבורית</a>
+      <a href="#education">משרד החינוך</a>
+      <a href="#civil">חברה אזרחית</a>
+      <a href="#violence">אלימות ופשיעה</a>
+      <a href="#arab-society" class="quicknav-arab">החברה הערבית</a>
+      <a href="#lgbt" class="quicknav-pride">הקהילה הגאה</a>
+      <a href="#shared-dialogue">אחדות החברה</a>
+    </div>
+    <button type="button" class="quicknav-arrow" data-dir="1" aria-label="גלילה ימינה">❯</button>
+  </div>
+</nav>
+
+<!-- ================= מפת המסע ================= -->
+<section class="bg-navy journey-section" id="journey">
+  <div class="container reveal">
+    <div class="journey-head">
+      <span class="sec-tag"><span class="tag-emoji">🗺️</span> מפת הדרך</span>
+      <h2>בתנועה ובצמיחה — 5 תחנות</h2>
+      <p class="sec-lede">המצע הזה הוא לא רשימה של פרקים, אלא מסע אחד שלם: מהשטח, דרך חיזוק הארגון, ועד לשולחן קבלת ההחלטות ולחברה צודקת יותר.</p>
+    </div>
+    <div class="journey-path">
+      <div class="journey-stop">
+        <div class="journey-connector" aria-hidden="true"></div>
+        <span class="journey-icon">🌱</span>
+        <h4>מתחילים מהשטח</h4>
+        <p>מועצות בית ספריות, רשויות, מחוזות ונציגים.</p>
+      </div>
+      <div class="journey-stop">
+        <div class="journey-connector" aria-hidden="true"></div>
+        <span class="journey-icon">⚙️</span>
+        <h4>מחזקים את גלגלי המועצות</h4>
+        <p>שפה ארגונית, הכשרה, מיפוי וליווי.</p>
+      </div>
+      <div class="journey-stop">
+        <div class="journey-connector" aria-hidden="true"></div>
+        <span class="journey-icon">🏛️</span>
+        <h4>מגיעים לשולחן קבלת ההחלטות</h4>
+        <p>כנסת, משרדי ממשלה, משרד החינוך ורשויות.</p>
+      </div>
+      <div class="journey-stop">
+        <div class="journey-connector" aria-hidden="true"></div>
+        <span class="journey-icon">🤝</span>
+        <h4>בונים שותפויות</h4>
+        <p>חברה אזרחית, אקדמיה, תנועות, ארגונים ומגזר עסקי.</p>
+      </div>
+      <div class="journey-stop">
+        <span class="journey-icon">🌳</span>
+        <h4>מצמיחים חברה צודקת</h4>
+        <p>ביטחון, שוויון הזדמנויות, זכויות נוער וקול לנוער.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= פתיחה ================= -->
+<section class="bg-cream" id="opening">
+  <div class="container-narrow letter-wrap reveal">
+    <div class="letter-body">
+      <p>התחלתי את הדרך שלי במועצות התלמידים והנוער לפני חמש שנים, מתוך אמונה אמיתית שהנוער יכול לחולל שינוי בחברה הישראלית, במערכת החינוך ובעיצוב המקום שבו נחיה.</p>
+      <p>אני כותב את המצע הזה היום כיו״ר הוועדה האתית-משפטית הארצית, לאחר שהובלתי מועצה בית ספרית, רשותית ומחוזית. הדרך שלי במועצות היא גם הדרך שבה אני מאמין שהארגון צריך לצמוח: מהשטח, דרך המחוזות, ועד לשולחן ההחלטות.</p>
+      <p>בשנים האחרונות פגשתי את השטח מקרוב - הכרתי את הבעיות הספציפיות של בתי ספר הרחוקים ממני אף כמה קילומטרים בודדים, התמקצעתי בכל מה שהגיע לפתחי, והתמודדתי עם סוגיות אמיתיות שפוגשות את הארגון שלנו יום-יום, מפיהם של נציגים, יו״רים, גורמי פיקוח ושותפים - הכרתי את מועצות התלמידים והנוער מהשטח, ברגליים.</p>
+      <p>בשנים האלה עברתי דרך ארוכה במועצות התלמידים והנוער, שלימדה אותי להוביל מחוז, לקחת חלק משמעותי בהובלת הארגון כולו, ולהתמודד עם בעיות מורכבות תוך שאני רואה את הארגון שלנו חי ונושם.</p>
+
+      <p style="margin-top:6px;">בשנים של חוסר יציבות הרגשתי, כנער, גאווה במה שאנחנו עושים. וכנציג הבנתי שיש עוד אינספור דרכים שנוכל להגיע אליהן.</p>
+      <p>אני מאמין שתפקידים הם פלטפורמה למימוש יעדים ואידאולוגיה. לפני שהתחלתי לשקול את הבעד והנגד לגבי הריצה, ישבתי וחשבתי שוב על מה הדליק את הניצוץ, אי-שם בכיתה ז׳, להיכנס למועצות התלמידים והנוער.</p>
+      <p>וידעתי מהר מאוד לענות לעצמי שמה שהביא אותי למועצות הוא היכולת של המקום הזה לחולל שינוי בחברה, עבור חברה צודקת. <strong>ומהי חברה צודקת?</strong></p>
+
+      <ul class="value-list">
+        <li>חברה בה נער מרהט יוצא מהבית לתנועת נוער ולא שומע יריות בדרך.</li>
+        <li>חברה בה נערה בקצרין זוכה לאותו ביטחון והזדמנות כמו נערה ברמת השרון.</li>
+        <li>חברה בה נער ביסקסואלי בירושלים חש באותו ביטחון כמו נער הומו במרכז תל אביב.</li>
+        <li>חברה בה כל תלמיד שנכנס לבית הספר מרגיש בטוח, ומוצא בו את קורת הגג שלו.</li>
+        <li>חברה שבה החינוך עומד בראש, מנקודת מבטם של התלמידים.</li>
+        <li>חברה שמבינה שזכויות ילדים ונוער הן ליבת החינוך.</li>
+        <li>חברה שמבינה שחינוך פורמלי ובלתי פורמלי, כשהם באים יחד, יוצרים מחר טוב יותר.</li>
+        <li class="highlight">🌳 חברה בה נוער אינו רק ״דור העתיד״, כפי שכל מבוגר אומר בכל פגישה, כנס או ועידה, אלא <strong>הדור שנמצא כבר עכשיו על שולחן קבלת ההחלטות במדינה.</strong></li>
+      </ul>
+
+      <p><strong>מאותו רגע ידעתי שליבת המצע הזה תהיה השאיפה שלנו, כנוער, להוביל בחברה הישראלית - עבור חברה צודקת.</strong></p>
+      <p>ואיך מגיעים לנוער שמוביל חברה צודקת? <strong>שותפות</strong> - בבית הספר, ברשות המקומית, במשרדי הממשלה, במחוזות, בארגוני החברה האזרחית ובבית הנבחרים - כשבכל מקום נוער יושב סביב השולחן.</p>
+      <p>וברור לי שנוער ישב סביב השולחן כתוצאה מ<strong>מעורבות</strong> שהנוער לוקח על עצמו בחברה, דרך ארגון מועצות תלמידים ונוער שהוא משפיע, מקצועי, מחובר וחזק - הודות לשפה ארגונית מוטמעת.</p>
+      <p>אני מאמין ביכולת של מועצת התלמידים והנוער הארצית, ושל כל מועצה במדינה, להיות זו שיושבת סביב שולחן קבלת ההחלטות, ושזהו המתכון הטוב ביותר לחברה צודקת.</p>
+      <p>מקווה שתאמינו במצע הזה כמוני.</p>
+    </div>
+
+    <div class="intro-block reveal">
+      <div class="sec-head" style="margin-bottom:26px;">
+        <h2 style="font-size:1.6rem;">רגע לפניי, חשוב שנשב להכיר</h2>
+      </div>
+      <div class="intro-flex">
+        <div class="intro-photo">
+          <img src="assets/images/rotem-profile.jpg" alt="רותם גטריידה שותה קפה בבית קפה">
+        </div>
+        <div class="intro-text">
+          <p>אני רותם גטריידה, אני נער בן 17 מפתח תקווה. התחלתי את מועצות התלמידים והנוער בכיתה ז׳ כשהניצוץ שלי נבע בין היתר מהיותי ילד עם לקויות למידה שלא מצליח להסתדר עם מערכת החינוך, ושאוהב להאמין ביכולת שלו לשנות את החברה.</p>
+          <p>למדתי עם השנים שלי המון, על עצמי, על המערכת, על המשפחה שלי ועל מה שאני מתעסק בו היום.</p>
+          <p>אני מאוד אוהב ומאמין במועצות, וזו הסיבה מספר 1 שלי לרוץ לתפקיד הזה.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-block" id="experience">
+      <button type="button" class="model-toggle" id="experienceToggle" aria-expanded="false" aria-controls="experiencePanel">
+        <span>ניסיון שצברתי במהלך השנים</span>
+        <span class="model-toggle-arrow">▾</span>
+      </button>
+      <div class="model-panel" id="experiencePanel">
+      <div class="model-panel-inner">
+      <div class="tl-items" style="--phase-color:var(--teal-500);--phase-color-soft:var(--teal-300);margin-top:20px;">
+        <div class="tl-item"><span class="tl-date">תשפ״ב</span><p>סגן יו״ר בית ספרי · נציג עירוני</p></div>
+        <div class="tl-item"><span class="tl-date">תשפ״ב (מחצית ב׳)</span><p>סגן יו״ר בית ספרי · יו״ר אתית עירוני · נציג מחוזי</p></div>
+        <div class="tl-item"><span class="tl-date">תשפ״ג</span><p>סגן יו״ר בית ספרי (קדנציה שנייה + ממלא מקום יו״ר אתית) · יו״ר אתית עירוני (קדנציה שנייה) · ראש צוות זכויות</p></div>
+        <div class="tl-item"><span class="tl-date">תשפ״ד</span><p>יו״ר אתית בית ספרי (קדנציה שנייה) · סגן יו״ר עירוני · יו״ר אתית מחוזי</p></div>
+        <div class="tl-item"><span class="tl-date">תשפ״ה</span><p>יו״ר אתית בית ספרי · נציג עירוני · יו״ר מחוז · נציג ארצי וסגן יו״ר הוועדה האתית-משפטית</p></div>
+        <div class="tl-item"><span class="tl-date">תשפ״ו</span><p>יו״ר הוועדה האתית-משפטית הארצית</p></div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<!-- ================= גלגלי המועצות ================= -->
+<section class="bg-white" id="wheels">
+  <div class="gear-row" aria-hidden="true">
+    <svg class="spin-cw" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+    <svg class="spin-ccw" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+  </div>
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌿</span>ארגון · 01</span>
+      <div class="sec-h2-row">
+        <h2>גלגלי המועצות</h2>
+        <button type="button" class="gears-trigger" id="gearsTrigger" aria-label="הפעל אנימציית גלגלים">
+          <span aria-hidden="true">⚙️</span>
+        </button>
+      </div>
+      <p class="sec-sub">כל גלגל מסתובב - הארגון כולו מתקדם</p>
+      <p class="sec-lede">מועצות לא מתחזקות בסיסמאות - הן צומחות דרך שפה, הכשרה, ליווי ועבודה יומיומית.</p>
+    </div>
+
+    <div class="prose">
+      <p>אנו רואים ברחבי המדינה מועצות רשותיות שחלקן כמעט פסיביות, ללא קשר עם בתי הספר, עם יכולת השפעה קטנה מדי ברשות וחוסר הבנה של מהות המועצה. באופן דומה, אנו רואים בבתי הספר מועצות בית ספריות המנותקות לחלוטין מהארגון, בחירות שאינן מתבצעות לפי שפה ארגונית, ומנחים בית ספריים השרויים בחוסר הבנה. וכן מחוזות ויו״רי מחוזות שצריך להעניק להם כוח רב יותר לפעולה.</p>
+      <p>גלגלי המועצות דרשו מאיתנו בשנים האחרונות עבודת עומק משמעותית לחיזוק הארגון - שכן השנים האחרונות, שכללו את הקורונה, את פיצול משרד החינוך לשני משרדים, ושינויים במערכי הפיקוח של מינהל חברה ונוער, החלישו את המועצות הבית ספריות והביאו אותנו למצב המחייב תוכניות פעולה.</p>
+      <p>כיו״ר הוועדה האתית-משפטית הארצית בשנה האחרונה שמתי דגש משמעותי על מועצות התלמידים והנוער כארגון. הטמעת השפה הארגונית היא קריאת השכמה למועצות לקום ולפעול, הדרך עוד ארוכה, ו<strong>המנגנון שפותח חייב לצאת לשטח עד שנת הלימודים תשפ״ח - זו תהיה אחת ממטרות העל שלי.</strong></p>
+      <p>הראייה שלנו היא להסתכל לעומק על הרשויות ובתי הספר, יחד עם המחוזות ויו״רי המחוזות - ההסתכלות שלי על יו״ר מועצה מחוזית היא כעל מנוע ניהולי מחוזי של מערכת מועצות התלמידים והנוער, כל אחד בתחום מחוזו, בהתאם לצרכים ולמדיניות הארצית והמחוזית כאחד. ההבנה שבה אנו מטמיעים שפה ארגונית, פותרים בעיות בצורה שוטפת, ומחברים את המועצה הארצית והמחוזות למערכת אחת שפועלת בשפה משותפת - קריטית להצלחת חיזוק גלגלי המועצות.</p>
+      <p>המועצות זקוקות למסע של חיזוק, בנייה וצמיחה, המבוסס על הטמעת השפה הארגונית, תהליכי הכשרה, <strong>בניית תהליכים מחוזיים בהתאם לסעיפים 6-7 במסמך הוועידה הארצי,</strong> וכן חקיקת חוק מועצות תלמידים ונוער שיאפשר למועצות התלמידים והנוער עצמאות בחוק, ויחזק את מעמד המועצות המחוזיות מבחינת הכלים והכוח שברשותן, דרך מנגנוני הטמעת השפה הארגונית.</p>
+      <p><strong>המועצות הרשותיות שלנו צריכות לקבל תמיכה משמעותית מהמחוזות</strong>, כדי שיוכלו לטפח גם את חוזק הנציגות בתוך הרשות וגם את המועצות הבית ספריות בתחום הרשות.</p>
+      <p>בתפקידי כיו״ר מחוז תל אביב, התחדדה בי ההבנה לאחר שיח עם מפקחות, בתי ספר ורשויות וביקורים ברשויות, ולאחר שנפגשתי עם נציגים ונאבקתי על גיוון אוכלוסייה ועל ייצוג נכון ומוסדר - אני יודע ומאמין שאנחנו יכולים להקפיץ את הארגון כמה רמות מעלה, ולהתגבר על המכשולים העומדים בפנינו בהכשרת הנציגים ובליקויי התקינות בבתי הספר והרשויות.</p>
+    </div>
+
+    <h3 class="conf-badge-anchor" style="font-size:1.4rem;color:var(--navy-950);margin:44px 0 14px;"><span class="conf-badge">יישום היגדים 6-7 ממסמך הוועידה</span>התהליך להטמעה ופיקוח על השפה הארגונית</h3>
+    <div class="prose">
+      <p>התהליך להטמעת השפה הארגונית בנוי כפי שמוצג בתרשים המצורף כאן. התהליך הובא בשנה האחרונה בפני סמנכ״ל משרד החינוך ומנהל המינהל, הוכרז בוועידה, והרקע לו נבנה בימים אלה במיפוי המועצות על ידי המפקחת הארצית.</p>
+      <p>התהליך להטמעה ופיקוח על השפה הארגונית <strong>הוא מנגנון שיאפשר לנו לנהל את מועצות התלמידים טוב יותר</strong>, לתת מענה לבעיות, ולפתח תמיכה וליווי מסודרים.</p>
+    </div>
+    <div class="card-list">
+      <div class="card"><p>נשאף להביא בהקדם את התהליך אל מנהלי המחוזות, לקבלת תמיכה והתחלת ההטמעה בליווי הפיקוח וההדרכה של מינהל חברה ונוער.</p></div>
+      <div class="card"><p>נמשיך בתהליכי המיפוי השוטפים.</p></div>
+    </div>
+    <button type="button" class="model-toggle" id="modelToggle" aria-expanded="false" aria-controls="modelPanel">
+      <span>לקריאת המודל להטמעה ופיקוח על השפה הארגונית</span>
+      <span class="model-toggle-arrow">▾</span>
+    </button>
+    <div class="model-panel" id="modelPanel">
+    <div class="model-panel-inner">
+    <div class="timeline-head">
+      <div class="tl-title">מודל להטמעה ופיקוח על השפה הארגונית — תשפ״ו–תשפ״ז</div>
+      <p>לוח הזמנים המלא של התהליך, משלב ההסברה ועד ההוקרה בסיום השנה, לפי שלושת שלבי היישום.</p>
+    </div>
+
+    <div class="tl-phase" style="--phase-color:var(--teal-500); --phase-color-soft:var(--teal-300);">
+      <div class="tl-phase-head"><span class="tl-phase-chip">פגישות התנעה והסברה</span></div>
+      <div class="tl-items">
+        <div class="tl-item"><span class="tl-date">פברואר</span><p>מורחבת יו״רים + רפרנטים</p></div>
+        <div class="tl-item"><span class="tl-date">פברואר</span><p>חשיפה להנהלת מטה מורחבת</p></div>
+        <div class="tl-item"><span class="tl-date">פברואר</span><p>חשיפה למנהלי מחוזות</p></div>
+      </div>
+    </div>
+
+    <div class="tl-phase" style="--phase-color:var(--amber-500); --phase-color-soft:#F1D9AE;">
+      <div class="tl-phase-head"><span class="tl-phase-chip">היערכות להפעלה</span></div>
+      <div class="tl-items">
+        <div class="tl-item">
+          <span class="tl-date">יוני</span>
+          <p>חוזר מפורט למינהל חברה ונוער במחוזות על הפעלת התוכנית בשנת תשפ״ז</p>
+          <div class="tl-sub">
+            <span>1. לוחות זמנים</span>
+            <span>2. תיק מועצה</span>
+            <span>3. סטנדרטים</span>
+            <span>4. ישיבות הטמעה למחוזות: הפיקוח המחוזי וממוני חח״ק + מזכירויות מחוזיות</span>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">יוני</span>
+          <p>לפני שנת הלימודים תשפ״ז</p>
+          <div class="tl-sub">
+            <span>1. מורחבת + יו״רי אתית מחוזיים</span>
+            <span>2. מורחבות במחוזות</span>
+            <span>3. פיתוח מערכי הכשרה מחוזיים</span>
+            <span>4. ישיבת התנעה בכל מחוז עם הפיקוח הרשותי</span>
+            <span>5. ישיבות עם יו״רי הרשויות לפי מחוזות</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-phase" style="--phase-color:var(--navy-700); --phase-color-soft:var(--teal-300);">
+      <div class="tl-phase-head"><span class="tl-phase-chip">יציאה לדרך והתנעה — מפעילים בשנת תשפ״ז</span></div>
+      <div class="tl-items">
+        <div class="tl-item"><span class="tl-date">ספטמבר</span><p><strong>פרסום לוח גאנט מחוזי כולל</strong> (מומלץ בכנס מחוזי)<br><strong>כנס/ישיבת התנעה</strong> עם מנחים רשותיים ובתי ספר, כשולחן עגול לפי מחוזות</p></div>
+        <div class="tl-item"><p><strong>התנעת מערך ההכשרה המחוזי</strong> (הצגת סילבוס חובה ובחירה)<br>ליווי והדרכה בארגון, מהמועצות המחוזיות אל הרשויות ובתי הספר<span class="tl-note">* יש לייצר ליווי למלווים מצד המזכירות המחוזית</span></p></div>
+        <div class="tl-item"><span class="tl-date">אוקטובר</span><p>סיום הכנת הכיתות לבחירות למועצה הבית ספרית</p></div>
+        <div class="tl-item"><p>סיום בחירות למועצה הבית ספרית</p></div>
+        <div class="tl-item"><p>סיום בחירות לבעלי תפקידים ונציגים למועצה הרשותית (בי״ס + ארגונים)</p></div>
+        <div class="tl-item"><span class="tl-date">נובמבר</span><p>סיום הקמת המועצות הרשותיות</p></div>
+        <div class="tl-item"><p>סיום בחירות לנציגות מחוזית</p></div>
+        <div class="tl-item"><span class="tl-date">דצמבר</span><p>סמינרי חנוכה + פורום יו״רים וסגני יו״רים מחוזי וארצי</p></div>
+        <div class="tl-item"><p>היערכות לדוחות ביקורת</p></div>
+        <div class="tl-item"><span class="tl-date">20–27 בינואר</span><p>ישיבות סטטוס עם רכזי החח״ק הבית ספריים<br>ישיבות סטטוס עם מנהלי מחלקות הנוער של המועצות הרשותיות</p></div>
+        <div class="tl-item"><span class="tl-date">מרץ</span><p><strong>ועדה מחוזית להצגת פעילות והטמעת השפה</strong> - מורכבת ממפקח רשותי, רפרנט מנהיגות, מועצה מחוזית ובוגר/ת<br>הוועדה תגיע אל הרשויות, ושם תוצג פעילות המועצה והעבודה לפי השפה הארגונית</p></div>
+        <div class="tl-item"><span class="tl-date">אפריל-מאי</span><p>יישום תוצאות הוועדה במידת הצורך</p></div>
+        <div class="tl-item"><span class="tl-date">מאי-יוני</span><p>הוקרה והערכה ברמת הרשות או המחוז</p></div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= המחוזות ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-navy" id="districts">
+  <div class="container reveal">
+    <div class="sec-head conf-badge-anchor">
+      <span class="conf-badge">יישום היגדים 6-7 ממסמך הוועידה</span>
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌿</span>ארגון · 02</span>
+      <h2>המחוזות</h2>
+      <p class="sec-lede">המחוזות שלנו הם ליבת חוזקו של הארגון. מחוזות חזקים מייצרים ארגון מנוהל היטב.</p>
+    </div>
+
+    <div class="prose">
+      <p>בכל החלטה עלינו להכיר בגלגל המחוזי כמנוע ניהולי מחוזי של מערכת מועצות התלמידים, כשכל מחוז אחראי על הרשויות ובתי הספר שבתחומו. <strong style="color:var(--white)">המחוזות הם מנוע הצמיחה של הארגון כולו.</strong></p>
+      <p><strong style="color:var(--white)">עבור המחוזות נבנה, יחד עם יו״רי המחוזות והמזכירות הארצית, את <u>תוכנית שלושת הח׳ים</u>:</strong></p>
+    </div>
+
+    <div class="grid-3">
+      <div class="tile"><div class="tile-num" aria-hidden="true">🤝</div><h4>חיזוק הקשר המחוזי</h4><p>חיזוק הקשר של המחוזות עם מינהל חברה ונוער ומשרדי הממשלה ברמה המחוזית.</p></div>
+      <div class="tile"><div class="tile-num" aria-hidden="true">🎓</div><h4>חיזוק ההכשרה</h4><p>חיזוק מערך ההכשרה והשפה הארגונית במחוז.</p></div>
+      <div class="tile"><div class="tile-num" aria-hidden="true">🗺️</div><h4>חיזוק המיפוי</h4><p>חיזוק המיפוי המחוזי במטרה לתת כלים ופתרונות לאתגרים מקומיים, כדרך ליישום מסמך הוועידה.</p></div>
+    </div>
+
+    <p class="prose" style="margin-top:30px;"><strong style="color:var(--white)">בקדנציה הקרובה נוביל, הן עבור המחוזות והן עבור כלל הגלגלים, את הוצאתו לפעולה מלאה של התהליך להטמעה ופיקוח על השפה הארגונית.</strong></p>
+
+    <div class="card-list">
+      <div class="card"><p><strong>במורחבת יו״רי המחוזות</strong> - נמפה את שלוש הנקודות שכל יו״ר מחוז היה רוצה לקדם.</p></div>
+      <div class="card"><p>נבנה תוכנית ייעודית לליווי, הכשרה והענקת כלים נוספים ליו״רי המחוזות הנכנסים, במטרה ליצור שפה משותפת בין הארצית והמחוזות, ובפרט סביב תפקיד הגלגל המחוזי.</p></div>
+      <div class="card"><p>נוביל את התהליך להטמעה ופיקוח על השפה הארגונית כתהליך-על, ונבנה את תוכנית שלושת הח׳ים בהתאמה לכל מחוז, דרך הצבת יעדים לכל מחוז ועבודה משותפת עם כל יו״ר מחוז לפי צרכיו הספציפיים.</p></div>
+      <div class="card"><p>נבצע מעקב קבוע אחר הגאנט הארצי, במטרה לסייע למחוזות לעמוד בו ולזהות קשיים בזמן אמת, כך שהגלגלים יוכלו להמשיך לנוע.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= מזכירות כצוות ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-cream" id="secretariat">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌿</span>ארגון · 03</span>
+      <h2>מזכירות שמצמיחה עבודה משותפת</h2>
+      <p class="sec-sub">צוות אחד, בתנועה מתמדת</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card"><p><strong>סגן יו״ר המועצה</strong> - אשאף לקשר עבודה שוטף וצמוד עם סגן יו״ר המועצה. נקבע בתחילת הקדנציה את דרכי העבודה לפרטים, ברמת ניהול תחומים ותיאום ציפיות בכל אחד מהם.</p></div>
+      <div class="card"><p><strong>מזכ״ל המועצה</strong> - יהווה חלק משמעותי בניהול הלוגיסטי של המועצה ושל המזכירות - נשאף להעמיק, יחד עם מזכ״ל המועצה, את שימור הידע של מועצות התלמידים בארכיון אחד.</p></div>
+      <div class="card"><p><strong>דובר המועצה</strong> - אשאף, יחד עם דובר המועצה, לתכנן את המשך האסטרטגיה התקשורתית לקראת הבחירות לכנסת, ולבנות מהלכים ופעולות לחיזוק מערך הדוברות בכל גלגלי המועצות.</p></div>
+      <div class="card"><p><strong>יו״ר הוועדה האתית-משפטית</strong> - אשאף, יחד עם יו״ר הוועדה האתית-משפטית, להציב את התהליך להטמעה ופיקוח על השפה הארגונית כמטרת-על לקדנציה, ובנוסף נבנה בהקדם האפשרי לוח גאנט לפתיחת תקנון-העל לשנה הקרובה.</p></div>
+      <div class="card"><p><strong>יו"ר ועדת נוער וקהילה</strong> - נשאף לחדד את הפרויקט הארצי הנבחר ולהוציאו ליישום בהקדם, בנוסף לתכנון המהלכים הבאים בחברה הישראלית בנושא הפשיעה והאלימות.</p></div>
+      <div class="card"><p><strong>מבקר המועצה</strong> - אשמור על קשר רציף עם מבקר המועצה - עבורי, תהליכי הביקורת הם ייעוץ מדויק ומשקף לניהול נכון של ארגון, מועצה, כלים ופעולות.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= מליאה ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-mint" id="plenum">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌿</span>ארגון · 04</span>
+      <h2>מליאה שמצמיחה מנהיגות</h2>
+      <p class="sec-lede">ההגדרה של מליאת המועצה כגוף העליון היא הנכונה ביותר לצורך קביעת מדיניות המועצה - ובאופן ספציפי במליאה הארצית, לכלל ההחלטות המועברות מהמועצה הארצית אל גלגלי המועצות. כל נציג ונציגה במליאה צריכים לצאת מהקדנציה עם תחום שהובילו, אחריות שלקחו וצמיחה שעברו.</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card"><p>כמו בכל שנה, <strong>נמפה</strong> בתחילת השנה את המליאה הארצית לפי תחומים, חוזקות וניסיון עבר במועצות, על פי כל נציג.</p></div>
+      <div class="card"><p>השאיפה ש<strong>כל נציג יוביל נושא</strong> נראית לי נכונה, ומתפרשת לאורך זמן על פני קדנציה שלמה - למימוש אישי של הנציג, ולהכוונת המזכירות, בין אם ברמת הפורום המוביל או יו״רי הוועדות, בהתאם לנושא, ליוזמה, לפעולה או למהלך.</p></div>
+      <div class="card"><p>נבחן את מבנה <strong>השדולות</strong> - במבט על השנה האחרונה, יש היגיון לעבור למתווה אחר שייצג את האוכלוסיות וייתן להן מענה - אחת האפשרויות היא נציג המתמחה בנושא, ומכלל את ייצוג האוכלוסייה במועצה הארצית.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= כנסת ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-navy" id="knesset">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌳</span>השפעה · 01</span>
+      <h2>כנסת</h2>
+      <p class="sec-sub">להצמיח כוח נוער בזירה שבה מתקבלות ההחלטות</p>
+      <p class="sec-lede">אנחנו מתקרבים היום בצעדי ענק לבחירות לכנסת ה-26. לקראת הבחירות השקנו את ״מצע לנוער״ - תהליך שלם שיציב את קול הנוער בלב מערכת הבחירות הקרובה.</p>
+    </div>
+
+    <div class="poster-wrap" style="display:flex;justify-content:center;margin:8px 0 40px;">
+      <img src="assets/images/vote-youth-poster.jpg" alt="בוחרים בנוער - מצע לנוער" style="max-width:360px;width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow-lg);">
+    </div>
+
+    <div class="knesset-gallery">
+      <figure class="kg-item">
+        <img src="assets/images/knesset-photo-1.jpg" alt="">
+      </figure>
+      <figure class="kg-item">
+        <img src="assets/images/knesset-photo-2.jpg" alt="">
+      </figure>
+      <figure class="kg-item">
+        <img src="assets/images/knesset-photo-3.jpg" alt="">
+      </figure>
+    </div>
+
+    <div class="prose">
+      <p>בעיניי הכנסת היא זירה שלא מוצתה מספיק בשנים האחרונות, והחלפת הכנסת הנוכחית תאפשר לנו לבסס את מעמד המועצה הארצית בכנסת ולהשתמש בכלים שהיא מעמידה לרשותנו.</p>
+      <p>בעזרת מערכת הבחירות, מצע לנוער וכלל התהליך לקראת הבחירות לכנסת ה-26, נהפוך את הכנסת לזירה מרכזית עבורנו, נחזק את הלובי של נציגי הנוער בכנסת מול הממשלה שתיבחר ומול כל סיעה ומפלגה. נעשה זאת באמצעות מספר כלים:</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card"><p><strong>קידום ״מצע לנוער״</strong> - התהליך יהיה בשיאו בקדנציה הקרובה; נקיים את פאנל הנוער הגדול כדי לייצר הד נוסף סביב המצע ומסרי המפלגות, נמשיך בקידום האסטרטגיה של המועצה הארצית, ונדבר בחודשים הקרובים - עד השבעת ממשלה חדשה - על התחייבויות הפוליטיקאים כלפי הנוער.</p></div>
+      <div class="card"><p><strong>מיפוי רחב של חברי הכנסת ויצירת שיתופי פעולה</strong> - חברי כנסת חדשים הם הזדמנות ליצור שיתופי פעולה. נקדם מיפוי של כלל חברי הכנסת והסיעות, ונפעל לקיים קשרים עם קואליציה ואופוזיציה כאחד. נקיים פגישות שותפות כדי לחזק את ההיכרות והשותפות איתנו.</p></div>
+      <div class="card"><p><strong>שותפות אפקטיבית בוועדות הכנסת</strong> - נפעל להגביר את נוכחותנו בוועדות הכנסת, להרחיב את שיתוף הפעולה עם ערוץ הכנסת, ולחזק את תהליכי ההכנה לקראת הישיבות ואת הפקת הלקחים וסיכום כל פגישה - לשם רצף זיכרון ארגוני וקידום נושאים. הכלים הפרלמנטריים והפיקוח הפרלמנטרי הם כלי חיוני לעשייה שלנו מול משרדי הממשלה.</p></div>
+      <div class="card"><p><strong>קידום ועדת הנוער</strong> - ועדה בכנסת העוסקת בענייני הנוער תהיה הזדמנות אפקטיבית ליצירת שיתופי פעולה בין חברי הכנסת המובילים את דגלי הנוער והחינוך, ולהעלאת נושאים חשובים לסדר היום, כך שנייצר אפקטיביות רבה יותר בפעילות הפרלמנטרית של הנוער.</p></div>
+      <div class="card"><p><strong>קידום חקיקה רלוונטית לנוער</strong> - נפעל לקדם חקיקה ראשית הרלוונטית לנוער, כגון חוק החרם, חוק החינוך המעצים, חוק המועצות וחוק ה-Take It Down, ובמקביל להשפיע על חקיקת חוקים מזווית הראייה של הנוער, בהשראת מודלים עולמיים. ברגע שהפוליטיקאים המרכיבים את הממשלה וקובעים מדיניות במשרדים השונים יראו את טובת הנוער ואת הנוער כשותף בקבלת ההחלטות, נוכל להקפיץ משמעותית את העשייה ואת יכולת ההשפעה של המועצה הארצית.</p></div>
+    </div>
+
+    <p class="prose" style="margin-top:28px;"><strong style="color:var(--white)">בקדנציה הקרובה נשאף לחוקק את חוק החינוך המעצים, ולהשפיע על משרדי הממשלה מבפנים ודרך הכנסת.</strong></p>
+  </div>
+</section>
+
+<!-- ================= משרדי הממשלה ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-mint" id="government">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌳</span>השפעה · 02</span>
+      <h2>משרדי הממשלה</h2>
+      <p class="sec-lede">משרדי הממשלה, כקובעי מדיניות ברמה המקצועית, חיוניים להובלת הנוער בחברה הישראלית ולקידום האינטרסים של כל נער ונערה. הקשר של מועצת התלמידים והנוער הארצית עם משרדי הממשלה פורח בשנים האחרונות, ועדיין יש לאן לשאוף.</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card"><p><strong>מטרה</strong> - קבלת החלטת מנכ״לים משותפת של שלושה מנכ״לים במשרדי הממשלה, לשילוב מועצות תלמידים ונוער בכל הרמות הרלוונטיות במשרד.</p></div>
+      <div class="card"><p>נתחבר עם <strong>המשרד לביטחון לאומי</strong> כחלק מהמאבק בפשיעה ובאלימות.</p></div>
+      <div class="card"><p>נתחבר עם <strong>המשרד לשוויון חברתי</strong>, בהתמקדות על היחידה לקידום אוכלוסיית הלהט"ב והרשות לפיתוח כלכלי של מגזר המיעוטים, במטרה לחזק את החברה הערבית והקהילה הגאה.</p></div>
+      <div class="card conf-badge-anchor" id="public-transport"><span class="conf-badge">יישום היגד 5 ממסמך הוועידה</span><p>נעמיק את הקשר עם <strong>משרד התחבורה</strong> והביטחון בדרכים, ובאופן ספציפי עם הרשות הארצית לתחבורה ציבורית.</p></div>
+    </div>
+
+    <ul class="lettered">
+      <li><span class="letter">א</span><p>נשאף להטמיע במועצות התלמידים והנוער את הקשר והעבודה מול הרשויות המטרופוליניות, שעברו בחוק ממש בחודש האחרון.</p></li>
+      <li><span class="letter">ב</span><p>הקשר עם הרשות הארצית לתחבורה ציבורית יאפשר להעלות בעיות רחבות בתחבורה הציבורית, ולחבר בין הרשויות המקומיות במטרה ליצור תחבורה ציבורית נוחה ושוויונית.</p></li>
+      <li><span class="letter">ג</span><p>ניצור קשר עם חברות האוטובוסים ורכבת ישראל, ונשאף לתת מענה לבעיות רחבות.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= משרד החינוך ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-white" id="education">
+  <div class="container reveal">
+    <div class="sec-head conf-badge-anchor">
+      <span class="conf-badge">יישום היגד 3 ממסמך הוועידה</span>
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌳</span>השפעה · 03</span>
+      <h2>במשרד החינוך ומערכת החינוך</h2>
+      <p class="sec-lede">לפנינו שנה שתחייב אותנו לרקום את הקשרים מחדש - לנוכח חילופי מנכ״ל, ואולי גם שר חינוך. אנו רוצים להמשיך ולהעמיק את קשרינו, ואת היכולת הנהדרת שהייתה לנו בשנים האחרונות ליטול חלק בקביעת המדיניות במערכת.</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card card-amber"><p><strong>נשאף להטמיע בבתי הספר מקום לנוער בחינוך הפורמלי</strong>, דרך בחינת מודלים כגון ״נוער בוחר ערך״, כדרך לשילוב מועצות התלמידים בגפ״ן כחובה.</p></div>
+      <div class="card"><p>נמשיך את הקשר עם <strong>המזכירות הפדגוגית</strong>, ונשאף להחזיר את כנס ״קול החינוך״ של המועצה הארצית והמפמ״רים, בשולחנות עגולים לפי מקצועות.</p></div>
+      <div class="card"><p>נביא להשלמת התהליך שהחל השנה עם <strong>חוזרי המנכ״ל</strong> - זה יאפשר לנו לבחון וליטול חלק במדיניות בנושא הטלפונים בחטיבות, בדיווח ההיעדרויות ובמדיניות הפדגוגית הכללית.</p></div>
+      <div class="card"><p>החיבור הבא שלנו יהיה <strong>אגף בכיר תכנון ואסטרטגיה</strong> - אגף קריטי לנראות מערכת החינוך, המודד את המערכת ובוחן עמידה ביעדים ארוכי טווח.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= חברה אזרחית ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-white" id="civil">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌳</span>השפעה · 04</span>
+      <h2>שותפות עם החברה האזרחית</h2>
+      <p class="sec-sub">צומחים גם מעבר לגבולות המערכת</p>
+      <p class="sec-lede">האקדמיה, התנועות והארגונים</p>
+    </div>
+
+    <div class="prose">
+      <p>כדי להרחיב השפעה, צריך לצמוח גם מחוץ למערכת: עם אקדמיה, ארגונים, תנועות ושותפים. יש צורך ממשי שנעמיק את קשרינו בחברה האזרחית - בעלת כוח ויכולת השפעה על סדר היום במדינה.</p>
+      <p><strong>נשאף להוביל חלק לא קטן מהמהלכים השנה גם דרך החברה האזרחית, ובאופן ספציפי דרך ארגונים וקרנות - זאת לנוכח המצב שבו, בממשלת מעבר, אין תקציב מדינה ויכולות משרדי הממשלה מוגבלות.</strong></p>
+      <p>החברה האזרחית, מבחינתי, בנויה מכמה תחומים שאליהם נתחבר ונעמיק את קשרינו:</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="tile"><div class="tile-num" aria-hidden="true">🎓</div><h4>האקדמיה</h4><p>אוניברסיטאות, מכללות וההון האנושי של האקדמיה.</p></div>
+      <div class="tile"><div class="tile-num" aria-hidden="true">🤝</div><h4>ארגונים אזרחיים</h4><p>נעמיק את הקשר לגבי הארגונים הרלוונטיים, כגון אגודות הסטודנטים והשלטון האזורי.</p></div>
+      <div class="tile"><div class="tile-num" aria-hidden="true">💼</div><h4>המגזר העסקי</h4><p>חברות וקרנות פילנתרופיות.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= אלימות ופשיעה ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-mint" id="violence">
+  <div class="container reveal">
+    <div class="sec-head conf-badge-anchor">
+      <span class="conf-badge">יישום היגדים 2 ו4 ממסמך הוועידה</span>
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌲</span>חברה צודקת · 01</span>
+      <h2>אלימות ופשיעה</h2>
+      <p class="sec-sub">לבלום את הגל בתנועה, ולהצמיח ביטחון אמיתי</p>
+    </div>
+
+        <div class="poster-wrap" style="display:flex;justify-content:center;margin:32px 0 24px;">
+      <video controls playsinline style="max-width:480px;width:100%;height:auto;border-radius:14px;box-shadow:var(--shadow-lg);">
+        <source src="assets/video/violence-video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+<div class="prose">
+      <p><strong>אין צמיחה בלי ביטחון. אין מנהיגות נוער בלי אחריות לחיים עצמם.</strong></p>
+      <p>החברה הישראלית נמצאת היום במצב חירום. אירועי האלימות והפשיעה שאנו רואים במדינה, ובחברה הערבית בפרט, בתדירות יומיומית - לא יכולים להימשך, ומועצות התלמידים והנוער אינן יכולות לעמוד מנגד.</p>
+      <p>חובתנו לייצר לכל בן ובת נוער קורת גג וביטחון, המבוססים על רצף חינוכי בין החינוך הפורמלי לבלתי פורמלי, על מתן כלים למערכת החינוך, על מענה רגשי, ועל מניעה ומתן עזרה.</p>
+    </div>
+
+    <div class="card-list">
+      <div class="card card-amber"><p><strong>חבילת חוקים:</strong> חוק החרם, חוק ה-Take It Down, ובעדיפות בהולה - חוק חינוך מעצים, שייצר רצף חינוכי בין החינוך הפורמלי לבלתי פורמלי.</p></div>
+      <div class="card card-amber"><p><strong>משרדי ממשלה:</strong> מעבר למדיניות ברורה ומדויקת יותר עבור השטח, בדרכי המניעה הראשונית.</p></div>
+      <div class="card card-amber"><p>נקדם מהלך דרך הפוליטיקאים להגדלת <strong>מספר הפסיכולוגים</strong> בבתי הספר, והוספת תקנים למדריכי מוגנות.</p></div>
+      <div class="card card-amber"><p>דרישה לחיזוק הרשות לביטחון קהילתי.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= החברה הערבית ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-cream" id="arab-society">
+  <div class="container reveal">
+    <div class="sec-head">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌲</span>חברה צודקת · 02</span>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <h2>החברה הערבית</h2>
+        <svg class="arab-symbol" viewBox="0 0 120 120" style="width:55px;height:55px;flex-shrink:0;" aria-hidden="true">
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#00D4D4" stroke-width="12"/>
+          <line x1="25" y1="25" x2="95" y2="95" stroke="#00D4D4" stroke-width="12" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="sec-sub">שותפות אמיתית, קול אחד, ביטחון לכל נער ונערה</p>
+    </div>
+
+    <!-- ===== VALUES CARDS ===== -->
+    <div class="arab-values-grid">
+      <div class="arab-value-card">
+        <div class="arab-value-icon">👥</div>
+        <h4>נציגי חברה ערבית</h4>
+        <p>עבודה משותפת עם נציגי החברה הערבית לפתרון הבעיות והמצוקות של הנוער הערבי במדינה</p>
+      </div>
+      <div class="arab-value-card">
+        <div class="arab-value-icon">📢</div>
+        <h4>קול אחד</h4>
+        <p>ייצוג חזק וברור של צרכי הנוער הערבי</p>
+      </div>
+      <div class="arab-value-card">
+        <div class="arab-value-icon">🛡️</div>
+        <h4>ביטחון לנוער</h4>
+        <p>מניעה, חוסן קהילתי, וקורת גג לכל נער ונערה</p>
+      </div>
+      <div class="arab-value-card">
+        <div class="arab-value-icon">🏛️</div>
+        <h4>ביטחון תעסוקתי וכלכלי</h4>
+        <p>נתחבר עם הרשות לקידום מגזר המיעוטים במשרד לשוויון חברתי, במטרה להביא את קול הנוער בתוכניות לחיזוק הביטחון התעסוקתי והכלכלי גם בקרב הנוער בחברה הערבית.</p>
+      </div>
+    </div>
+
+    <div class="arabic-block">
+      <div class="ab-lang-toggle" role="group" aria-label="בחירת שפת הקטע">
+        <button type="button" class="ab-lang-btn active" data-lang-btn="he" aria-pressed="true">ע</button>
+        <button type="button" class="ab-lang-btn" data-lang-btn="ar" aria-pressed="false">ع</button>
+      </div>
+      <span class="ab-tag">קול מהחברה הערבית</span>
+
+      <div class="ab-content conf-badge-anchor" data-lang-content="he">
+        <span class="conf-badge">יישום היגד 2 ממסמך הוועידה</span>
+        <h3 style="font-family:var(--font-display);">החברה הערבית – מניפים דגל אדום</h3>
+        <div class="violence-wrapped">
+          <p>אנחנו עומדים מול מדינה שבשנים האחרונות מסרבת לטפל בבעיית הפשיעה והאלימות בחברה הערבית.</p>
+          <p>אך במהלך שלושים הימים האחרונים נחשפנו למציאות בלתי הגיונית - ביום אחד נרצחו חמישה בני אדם בחברה הערבית, ובהם בני נוער וילדים שאנו מייצגים.</p>
+          <p>אין מנוס מלדרוש מהמדינה להגביר בחברה הערבית תוכניות מניעה, לחזק תנועות וארגוני נוער, להפעיל תוכניות חוסן וחיסון קהילתי, ולספק לכל נערה ערבייה ולכל נער ערבי קורת גג שתגן עליהם.</p>
+          <p>אם יידרש - נשקול, בחודש אוגוסט, בפורום המזכירות המורחבת ויחד עם לובי החברה הערבית, להביא בפני המועצה הכללית הצעה שלא לפתוח את שנת הלימודים בחברה הערבית.</p>
+          <p>אם אין סיבה שתלמיד ילך לבית הספר כשהוא נתון תחת רקטות, אין גם שום סיבה שילך לבית הספר כשהוא חי בין יריות, דקירות ואלימות.</p>
+        </div>
+        <span class="foot">תרגום לעברית מהמקור בערבית</span>
+      </div>
+
+      <div class="ab-content" data-lang-content="ar" dir="rtl" hidden>
+        <h3>المجتمع العربي – رافعين راية حمراء</h3>
+        <div class="violence-wrapped">
+          <p>إحنا واقفين قدّام دولة، بآخر سنين، رافضة تعالج مشكلة الجريمة والعنف بالمجتمع العربي.</p>
+          <p>بس خلال الثلاثين يوم* الأخيرة، انكشفنا على واقع مش منطقي، انقتل بيوم واحد خمسة أشخاص بالمجتمع العربي، منهم شباب وإولاد إحنا منمثّلهم.</p>
+          <p>ما في مفرّ إلا نطالب الدولة إنها تزيد بالمجتمع العربي برامج الوقاية، وتقوّي حركات ومنظمات الشبيبة، وتعمل برامج صمود ومناعة مجتمعية، وتوفّر لكل بنت عربية ولكل شاب عربي سقف يحميه.</p>
+          <p>إذا لزم الأمر، رح نفكّر بشهر آب، بمنتدى السكرتارية الموسّعة، مع لوبي المجتمع العربي، إننا نجيب للمجلس العام اقتراح بعدم افتتاح السنة الدراسية بالمجتمع العربي.</p>
+          <p>إذا ما في داعي الطالب يروح على المدرسة وهو تحت الصواريخ، فما في أي سبب يروح على المدرسة وهو عايش بين الرصاص، والطعن، والعنف.</p>
+        </div>
+        <span class="foot">* כלשונו במקור</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= הקהילה הגאה ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-white lgbt-section" id="lgbt">
+  <div class="container reveal">
+    <div class="sec-head" style="margin-bottom:24px;">
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌲</span>חברה צודקת · 03</span>
+      <h2 style="font-size:1.3rem;">הקהילה הגאה</h2>
+      <p class="sec-sub" style="margin-top:6px;">ביטחון וגאווה, לאורך כל הדרך</p>
+    </div>
+
+    <div class="lgbt-value-grid">
+      <div class="lgbt-value-card" style="--card-accent:#E40303;">
+        <span class="lgbt-value-icon" aria-hidden="true">🏛️</span>
+        <p>נתחבר למשרד לשוויון חברתי ולמרכז לשלטון מקומי, במטרה להגביר את מספר רכזי הקהילה הגאה ברשויות המקומיות.</p>
+      </div>
+      <div class="lgbt-value-card" style="--card-accent:#FF8C00;">
+        <span class="lgbt-value-icon" aria-hidden="true">🏳️‍🌈</span>
+        <p>נוביל הזדהות כמועצה לאורך הקדנציה, עם שותפים ובעשייה השוטפת.</p>
+      </div>
+      <div class="lgbt-value-card" style="--card-accent:#06B925;">
+        <span class="lgbt-value-icon" aria-hidden="true">📚</span>
+        <p>נשאף להכניס למערכת החינוך תכנים של חינוך להכלה.</p>
+      </div>
+      <div class="lgbt-value-card" style="--card-accent:#4D4DFF;">
+        <span class="lgbt-value-icon" aria-hidden="true">🎓</span>
+        <p>נחזק את הקשר עם שפ״י להכשרת יועצות וצוותים חינוכיים.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= אחדות החברה ================= -->
+<div class="growth-seam" aria-hidden="true">
+  <span class="growth-dot">
+    <svg viewBox="0 0 24 24"><path d="M12 21V9M12 9C6 9 4 4 4 4s5-1 8 3c3-4 8-3 8-3s-2 5-8 5Z"/></svg>
+  </span>
+</div>
+
+<section class="bg-navy unity-section" id="shared-dialogue">
+  <div class="container reveal">
+    <div class="sec-head conf-badge-anchor">
+      <span class="conf-badge">יישום היגד 1 ממסמך הוועידה</span>
+      <span class="sec-tag"><span class="tag-emoji" aria-hidden="true">🌲</span>חברה צודקת · 04</span>
+      <h2>אחדות החברה</h2>
+      <p class="sec-sub">מחברים בין מגזרים, בונים אמון, יוצרים שיח אחד</p>
+    </div>
+
+    <div class="unity-value-grid">
+      <div class="unity-value-card">
+        <div class="unity-connector" aria-hidden="true"></div>
+        <div class="unity-value-icon" aria-hidden="true"><span style="font-size:1.6rem;">🧭</span></div>
+        <h4>מדיניות ארצית לשיח משותף</h4>
+        <p>נוביל מדיניות ארצית למעגלי שיח וחיבור בין מגזרים ברמה מקומית ומחוזית.</p>
+      </div>
+      <div class="unity-value-card">
+        <div class="unity-connector" aria-hidden="true"></div>
+        <div class="unity-value-icon" aria-hidden="true"><span style="font-size:1.6rem;">💬</span></div>
+        <h4>יוזמות</h4>
+        <p>נמשיך להעמיק ולחזק פרויקטים ויוזמות כמו "מחליפים מילה" בשיתוף בית הנשיא.</p>
+      </div>
+      <div class="unity-value-card">
+        <div class="unity-value-icon" aria-hidden="true"><span style="font-size:1.6rem;">🗳️</span></div>
+        <h4>שיח מאחד לקראת הכנסת ה-26</h4>
+        <p>נמשיך במסגרת הבחירות לכנסת ה-26 לקרוא לשיח מאחד.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-cta">
+      <h3 class="footer-cta-title">צרו קשר</h3>
+      <div class="footer-contacts">
+        <a href="https://www.instagram.com/rotemgetraide?igsh=czJiNDk2bnFhaW9s&utm_source=qr" target="_blank" rel="noopener noreferrer" class="footer-contact-btn">עקבו באינסטגרם</a>
+        <a href="tel:0544768540" class="footer-contact-btn footer-contact-btn-ghost">054-476-8540</a>
+      </div>
+    </div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>בתנועה ובצמיחה</h3>
+      </div>
+      <div class="footer-nav">
+        <a href="#opening">פתיחה</a>
+        <a href="#wheels">גלגלי המועצות</a>
+        <a href="#districts">המחוזות</a>
+        <a href="#secretariat">מזכירות</a>
+        <a href="#plenum">מליאה</a>
+        <a href="#knesset">כנסת</a>
+        <a href="#government">משרדי הממשלה</a>
+        <a href="#education">משרד החינוך</a>
+        <a href="#civil">חברה אזרחית</a>
+        <a href="#violence">אלימות ופשיעה</a>
+        <a href="#arab-society">החברה הערבית</a>
+        <a href="#lgbt">הקהילה הגאה</a>
+        <a href="#shared-dialogue">אחדות החברה</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>רותם גטריידה · פתח תקווה</span>
+      <span>מצע לקדנציה הקרובה</span>
+    </div>
+    <div class="footer-signoff">
+      <p>🌱 נוער בתנועה. 🌿 מועצות בצמיחה. <strong>🌳 חברה צודקת - ביחד.</strong></p>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="חזרה למעלה">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="gears-overlay" id="gearsOverlay" aria-hidden="true" aria-label="אנימציית גלגלים">
+  <div class="gears-overlay-backdrop"></div>
+  <button type="button" class="gears-close" id="gearsClose" aria-label="סגירה">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <div class="gears-stage" id="gearsStage">
+    <div class="emoji-gear gear-a" aria-hidden="true"><span class="gear-glyph">⚙️</span></div>
+    <div class="emoji-gear gear-b" aria-hidden="true"><span class="gear-glyph">⚙️</span></div>
+    <div class="emoji-gear gear-c" aria-hidden="true"><span class="gear-glyph">⚙️</span></div>
+    <div class="emoji-gear gear-d" aria-hidden="true"><span class="gear-glyph">⚙️</span></div>
+
+    <div class="oil-can" aria-hidden="true">
+      <svg viewBox="0 0 100 100" class="oil-can-icon">
+        <rect x="54" y="6" width="14" height="18" rx="6"/>
+        <ellipse cx="62" cy="42" rx="26" ry="22"/>
+        <path d="M40 50 C 10 54, 3 70, 12 86 C 17 75, 25 67, 43 58 Z"/>
+        <ellipse cx="52" cy="33" rx="9" ry="6" fill="rgba(255,255,255,.3)"/>
+      </svg>
+      <span class="oil-drop drop-1"></span>
+      <span class="oil-drop drop-2"></span>
+      <span class="oil-drop drop-3"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Lazy-load the hero background video only after the whole page has finished
+  // loading, so the poster image (already visible) is what shows immediately.
+  window.addEventListener('load', () => {
+    const video = document.querySelector('.hero-video');
+    if (!video || !video.dataset.src) return;
+    setTimeout(() => {
+      const source = document.createElement('source');
+      source.src = video.dataset.src;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      video.load();
+      video.addEventListener('canplay', () => {
+        video.classList.add('is-ready');
+        video.play().catch(() => {});
+      }, { once: true });
+      video.addEventListener('error', () => {
+        console.warn('Hero video failed to load:', video.dataset.src);
+      });
+    }, 1200);
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // quicknav is always visible; just wire the left/right scroll arrows
+  const quicknavInner = document.getElementById('quicknavInner');
+  if (quicknavInner) {
+    document.querySelectorAll('.quicknav-arrow').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const dir = parseInt(btn.getAttribute('data-dir'), 10) || 1;
+        quicknavInner.scrollBy({ left: dir * 170, behavior: 'smooth' });
+      });
+    });
+  }
+
+  // active link on scroll (main nav + quick-nav strip)
+  const sections = document.querySelectorAll('section[id], header[id]');
+  const links = document.querySelectorAll('.nav-links a, .quicknav a');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        document.querySelectorAll(`a[href="#${id}"]`).forEach(link => {
+          if (link.closest('.nav-links, .quicknav')) link.classList.add('active');
+        });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(s => io.observe(s));
+
+  // smooth-scroll offset compensation for sticky quicknav (keeps target heading visible)
+  const quicknav = document.getElementById('quicknav');
+  document.querySelectorAll('.quicknav a, .nav-links a, .footer-nav a, .hero-actions a').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (!id || id.charAt(0) !== '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const qnHeight = quicknav ? quicknav.offsetHeight : 0;
+      const y = target.getBoundingClientRect().top + window.pageYOffset - (72 + qnHeight + 10);
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    });
+  });
+
+  // reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const rio = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('in'); rio.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  revealEls.forEach(el => rio.observe(el));
+
+  // back to top
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 700);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ---------- GEARS MICRO-INTERACTION ----------
+  (function(){
+    const trigger = document.getElementById('gearsTrigger');
+    const overlay = document.getElementById('gearsOverlay');
+    const backdrop = overlay ? overlay.querySelector('.gears-overlay-backdrop') : null;
+    const closeBtn = document.getElementById('gearsClose');
+    const stage = document.getElementById('gearsStage');
+    if (!trigger || !overlay || !stage) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let timers = [];
+    let lastFocused = null;
+
+    function clearTimers(){
+      timers.forEach(id => clearTimeout(id));
+      timers = [];
+    }
+
+    function resetStage(){
+      stage.classList.remove('stuck', 'oiling', 'dripping', 'spinning', 'leaving');
+    }
+
+    function runSequence(){
+      resetStage();
+      // phase 1: gears are stuck
+      if (!reduced) stage.classList.add('stuck');
+
+      const t1 = reduced ? 200 : 1100;
+      const t2 = reduced ? 250 : 650;   // oil can arrival + tilt to pour
+      const t3 = reduced ? 200 : 880;   // three drops fall, one after another
+      const spinHold = reduced ? 1400 : 2600;
+
+      timers.push(setTimeout(() => {
+        stage.classList.add('oiling');
+      }, t1));
+
+      timers.push(setTimeout(() => {
+        stage.classList.add('dripping');
+      }, t1 + t2));
+
+      timers.push(setTimeout(() => {
+        stage.classList.remove('stuck');
+        stage.classList.add('spinning');
+        stage.classList.add('leaving');
+      }, t1 + t2 + t3));
+
+      timers.push(setTimeout(() => {
+        closeOverlay();
+      }, t1 + t2 + t3 + spinHold));
+    }
+
+    function openOverlay(){
+      lastFocused = document.activeElement;
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+      document.addEventListener('keydown', onKeydown);
+      runSequence();
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeOverlay(){
+      clearTimers();
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onKeydown);
+      setTimeout(resetStage, 500);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+    }
+
+    function onKeydown(e){
+      if (e.key === 'Escape') closeOverlay();
+    }
+
+    trigger.addEventListener('click', openOverlay);
+    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
+    if (backdrop) backdrop.addEventListener('click', closeOverlay);
+  })();
+
+  // ---------- GROWTH PROGRESS MOTIF (top bar + vertical stage rail) ----------
+  (function(){
+    const topFill = document.getElementById('growthTopFill');
+    const railFill = document.getElementById('growthRailFill');
+    const stops = document.querySelectorAll('.growth-stop');
+    if (!topFill) return;
+
+    function computeStopPositions(){
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      stops.forEach(stop => {
+        const targetId = stop.getAttribute('data-target');
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        const rawPct = docHeight > 0 ? (target.offsetTop / docHeight) * 100 : 0;
+        const pct = Math.min(99, Math.max(0, rawPct));
+        stop.setAttribute('data-pct', pct);
+        stop.style.top = pct + '%';
+      });
+    }
+
+    function updateGrowthProgress(){
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min(100, Math.max(0, (window.scrollY / docHeight) * 100)) : 0;
+      topFill.style.width = pct + '%';
+      if (railFill) railFill.style.height = pct + '%';
+
+      let currentStop = null;
+      stops.forEach(stop => {
+        const stopPct = parseFloat(stop.getAttribute('data-pct'));
+        const reached = pct >= stopPct;
+        stop.classList.toggle('reached', reached);
+        if (reached) currentStop = stop;
+      });
+      stops.forEach(stop => stop.classList.toggle('current', stop === currentStop));
+    }
+
+    computeStopPositions();
+    updateGrowthProgress();
+    window.addEventListener('scroll', updateGrowthProgress, { passive: true });
+    window.addEventListener('resize', () => { computeStopPositions(); updateGrowthProgress(); });
+    window.addEventListener('load', () => { computeStopPositions(); updateGrowthProgress(); });
+  })();
+
+  // Hebrew / Arabic language toggle for the Arab-society voice block
+  document.querySelectorAll('.ab-lang-toggle').forEach(group => {
+    const block = group.closest('.arabic-block');
+    const buttons = group.querySelectorAll('.ab-lang-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang-btn');
+        buttons.forEach(b => {
+          const isActive = b === btn;
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+        block.querySelectorAll('.ab-content').forEach(content => {
+          content.hidden = content.getAttribute('data-lang-content') !== lang;
+        });
+      });
+    });
+  });
+
+  // organizational-language model toggle
+  const modelToggle = document.getElementById('modelToggle');
+  const modelPanel = document.getElementById('modelPanel');
+  if (modelToggle && modelPanel) {
+    modelToggle.addEventListener('click', () => {
+      const isOpen = modelPanel.classList.toggle('open');
+      modelToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // experience (ניסיון שצברתי) toggle
+  const experienceToggle = document.getElementById('experienceToggle');
+  const experiencePanel = document.getElementById('experiencePanel');
+  if (experienceToggle && experiencePanel) {
+    experienceToggle.addEventListener('click', () => {
+      const isOpen = experiencePanel.classList.toggle('open');
+      experienceToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // ---------- SEASON PICKER + WEATHER FX ----------
+  (function(){
+    const fx = document.getElementById('seasonFX');
+    const buttons = document.querySelectorAll('.season-btn');
+    if (!fx || !buttons.length) return;
+
+    let currentSeason = null;
+    let spawnTimer = null;
+
+    const EMOJI = {
+      autumn: ['🍁','🍂','🍃'],
+      spring: ['🌸','🌷','🌼']
+    };
+
+    function clearFX(){
+      if (spawnTimer){ clearInterval(spawnTimer); spawnTimer = null; }
+    }
+
+    function spawnLeafOrPetal(season){
+      const el = document.createElement('span');
+      el.className = 'fx-particle ' + (season === 'autumn' ? 'fx-leaf' : 'fx-petal');
+      const set = EMOJI[season];
+      el.textContent = set[Math.floor(Math.random() * set.length)];
+      el.style.left = (Math.random() * 100) + 'vw';
+      el.style.animationDuration = (9 + Math.random() * 6) + 's';
+      el.style.opacity = (0.55 + Math.random() * 0.4).toFixed(2);
+      fx.appendChild(el);
+      el.addEventListener('animationend', () => el.remove());
+    }
+
+    function spawnRain(){
+      const el = document.createElement('span');
+      el.className = 'fx-particle fx-rain';
+      el.style.left = (Math.random() * 100) + 'vw';
+      el.style.animationDuration = (0.7 + Math.random() * 0.5) + 's';
+      fx.appendChild(el);
+      el.addEventListener('animationend', () => el.remove());
+    }
+
+    function spawnSpark(){
+      const el = document.createElement('span');
+      el.className = 'fx-particle fx-spark';
+      el.textContent = Math.random() > 0.5 ? '✨' : '☀️';
+      el.style.left = (Math.random() * 100) + 'vw';
+      el.style.animationDuration = (6 + Math.random() * 4) + 's';
+      fx.appendChild(el);
+      el.addEventListener('animationend', () => el.remove());
+    }
+
+    function startSeason(season){
+      clearFX();
+      const spawners = { autumn: spawnLeafOrPetal, spring: spawnLeafOrPetal, winter: spawnRain, summer: spawnSpark };
+      const fn = spawners[season];
+      if (!fn) return;
+      for (let i = 0; i < 6; i++){
+        setTimeout(() => fn(season), i * 180);
+      }
+      spawnTimer = setInterval(() => fn(season), season === 'winter' ? 120 : 500);
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const season = btn.getAttribute('data-season');
+        if (currentSeason === season){
+          currentSeason = null;
+          clearFX();
+          document.body.classList.remove('season-active','season-spring','season-summer','season-autumn','season-winter');
+          buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+          return;
+        }
+        currentSeason = season;
+        document.body.classList.remove('season-spring','season-summer','season-autumn','season-winter');
+        document.body.classList.add('season-active', 'season-' + season);
+        buttons.forEach(b => {
+          const isActive = (b === btn);
+          b.classList.toggle('active', isActive);
+          b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+        startSeason(season);
+        
+        // Log the theme change for debugging
+        console.log('🎨 Theme changed to: ' + season);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
